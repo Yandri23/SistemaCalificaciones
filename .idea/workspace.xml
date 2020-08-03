@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020" />
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +43,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -54,7 +56,7 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -74,7 +76,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -87,7 +89,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -100,7 +102,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -122,16 +124,15 @@
       <method v="2" />
     </configuration>
     <configuration name="App 2" type="Python.DjangoServer" factoryName="Django server">
-      <module name="Sisitema Calificaciones" />
+      <module name="App 2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="App.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -146,7 +147,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="Python.FlaskServer">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -159,7 +160,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -171,7 +172,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docs" factoryName="Docutils task">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -188,7 +189,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docs" factoryName="Sphinx task">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -205,7 +206,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -224,7 +225,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="Sisitema Calificaciones" />
+      <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -267,7 +268,8 @@
       <workItem from="1596473909584" duration="645000" />
       <workItem from="1596475457684" duration="915000" />
       <workItem from="1596476412064" duration="1779000" />
-      <workItem from="1596480291220" duration="1212000" />
+      <workItem from="1596480291220" duration="1754000" />
+      <workItem from="1596487913084" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -330,10 +332,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="698" y="343" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1596477390292" />
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596475409578">
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596487971281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596475409578" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596487971281" />
     <state x="996" y="173" key="FileChooserDialogImpl" timestamp="1596480435791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -342,30 +344,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="784" y="439" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596477327042" />
-    <state x="795" y="336" width="408" height="253" key="Github.ShareDialog" timestamp="1596481171791">
+    <state x="795" y="336" width="408" height="253" key="Github.ShareDialog" timestamp="1596481578812">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="795" y="336" width="408" height="253" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481171791" />
-    <state x="1201" y="228" key="Github.UntrackedFilesDialog" timestamp="1594478273881">
+    <state x="795" y="336" width="408" height="253" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481578812" />
+    <state x="1023" y="119" key="Github.UntrackedFilesDialog" timestamp="1596481618962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1201" y="228" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594478273881" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1596481463289">
+    <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1596482073181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596481463289" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1596481463289">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1596482073181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596481463289" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1596481463289">
+    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1596482073181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596481463289" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1596481463289">
+    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1596482073181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596481463289" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
     <state x="713" y="183" key="RollbackChangesDialog" timestamp="1596297266871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
