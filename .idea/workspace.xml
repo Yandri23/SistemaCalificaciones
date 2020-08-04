@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="1era VERSION DEL PROYECTO Guardado 01/08/2020">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/img/home-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/img/home-bg.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +40,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -129,6 +131,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="App.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -269,7 +272,9 @@
       <workItem from="1596475457684" duration="915000" />
       <workItem from="1596476412064" duration="1779000" />
       <workItem from="1596480291220" duration="1754000" />
-      <workItem from="1596487913084" duration="59000" />
+      <workItem from="1596487913084" duration="207000" />
+      <workItem from="1596488132971" duration="123000" />
+      <workItem from="1596577957718" duration="2489000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -299,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596298104735</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1era VERSION DEL PROYECTO Guardado 01/08/2020">
+      <created>1596488050090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596488050090</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +337,8 @@
     <MESSAGE value="Guardado 11/07/2020" />
     <MESSAGE value="MI PRIMERA VERSION DEL PROYECTO Guardado 01/08/2020" />
     <MESSAGE value="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020" />
+    <MESSAGE value="1era VERSION DEL PROYECTO Guardado 01/08/2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="1era VERSION DEL PROYECTO Guardado 01/08/2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
@@ -352,22 +365,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1596482073181">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1596581221453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1596482073181">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1596581221453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1596482073181">
+    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1596581221453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1596482073181">
+    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1596581221453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
     <state x="713" y="183" key="RollbackChangesDialog" timestamp="1596297266871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -380,10 +393,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596298142200">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596488085001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596298142200" />
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596488085001" />
     <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595794462425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
