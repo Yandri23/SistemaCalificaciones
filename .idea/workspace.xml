@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="1era VERSION DEL PROYECTO Guardado 01/08/2020">
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="3da VERSION DEL PROYECTO Guardado 04/08/2020">
+      <change afterPath="$PROJECT_DIR$/core/static/img/home.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/static/img/home-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/img/home-bg.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +34,15 @@
   </component>
   <component name="JupyterTrust" id="f9df84b6-0607-4d11-b4c4-0ea69a830442" />
   <component name="ProjectId" id="1eXgl0kNQjmpIWGuycS2C61GhLP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -274,7 +277,7 @@
       <workItem from="1596480291220" duration="1754000" />
       <workItem from="1596487913084" duration="207000" />
       <workItem from="1596488132971" duration="123000" />
-      <workItem from="1596577957718" duration="2489000" />
+      <workItem from="1596577957718" duration="4947000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -311,7 +314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596488050090</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2da VERSION DEL PROYECTO Guardado 04/08/2020">
+      <created>1596581440373</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596581440373</updated>
+    </task>
+    <task id="LOCAL-00007" summary="3da VERSION DEL PROYECTO Guardado 04/08/2020">
+      <created>1596581646144</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596581646144</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +347,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/../" />
@@ -338,7 +356,9 @@
     <MESSAGE value="MI PRIMERA VERSION DEL PROYECTO Guardado 01/08/2020" />
     <MESSAGE value="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020" />
     <MESSAGE value="1era VERSION DEL PROYECTO Guardado 01/08/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="1era VERSION DEL PROYECTO Guardado 01/08/2020" />
+    <MESSAGE value="2da VERSION DEL PROYECTO Guardado 04/08/2020" />
+    <MESSAGE value="3da VERSION DEL PROYECTO Guardado 04/08/2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="3da VERSION DEL PROYECTO Guardado 04/08/2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
@@ -365,22 +385,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1596581221453">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1596583532056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1596581221453">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596583532056" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1596583532056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1596581221453">
+    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596583532056" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1596583532056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1596581221453">
+    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596583532056" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1596583532056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596581221453" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596583532056" />
     <state x="713" y="183" key="RollbackChangesDialog" timestamp="1596297266871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -393,10 +413,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596488085001">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596581656412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596488085001" />
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596581656412" />
     <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595794462425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
