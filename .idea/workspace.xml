@@ -10,9 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="5ta VERSION DEL PROYECTO Guardado 04/08/2020">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/alumnos.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/alumnos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/calificaciones.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/calificaciones.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/profesores.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/profesores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/secretaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/secretaria.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +38,20 @@
   </component>
   <component name="JupyterTrust" id="f9df84b6-0607-4d11-b4c4-0ea69a830442" />
   <component name="ProjectId" id="1eXgl0kNQjmpIWGuycS2C61GhLP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -52,7 +61,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
@@ -270,7 +279,16 @@
       <workItem from="1596475457684" duration="915000" />
       <workItem from="1596476412064" duration="1779000" />
       <workItem from="1596480291220" duration="1754000" />
-      <workItem from="1596487913084" duration="59000" />
+      <workItem from="1596487913084" duration="207000" />
+      <workItem from="1596488132971" duration="123000" />
+      <workItem from="1596577957718" duration="5452000" />
+      <workItem from="1596586159115" duration="2981000" />
+      <workItem from="1596589181859" duration="431000" />
+      <workItem from="1596590121976" duration="302000" />
+      <workItem from="1596598825617" duration="452000" />
+      <workItem from="1596653683066" duration="14000" />
+      <workItem from="1596653724727" duration="89000" />
+      <workItem from="1596654150230" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -300,7 +318,35 @@
       <option name="project" value="LOCAL" />
       <updated>1596298104735</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1era VERSION DEL PROYECTO Guardado 01/08/2020">
+      <created>1596488050090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596488050090</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2da VERSION DEL PROYECTO Guardado 04/08/2020">
+      <created>1596581440373</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596581440373</updated>
+    </task>
+    <task id="LOCAL-00007" summary="3da VERSION DEL PROYECTO Guardado 04/08/2020">
+      <created>1596581646144</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596581646144</updated>
+    </task>
+    <task id="LOCAL-00008" summary="4ta VERSION DEL PROYECTO Guardado 04/08/2020">
+      <created>1596584088865</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596584088865</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +365,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/../" />
@@ -326,7 +373,11 @@
     <MESSAGE value="Guardado 11/07/2020" />
     <MESSAGE value="MI PRIMERA VERSION DEL PROYECTO Guardado 01/08/2020" />
     <MESSAGE value="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="MI SEGUNDA VERSION DEL PROYECTO Guardado 01/08/2020" />
+    <MESSAGE value="1era VERSION DEL PROYECTO Guardado 01/08/2020" />
+    <MESSAGE value="2da VERSION DEL PROYECTO Guardado 04/08/2020" />
+    <MESSAGE value="3da VERSION DEL PROYECTO Guardado 04/08/2020" />
+    <MESSAGE value="4ta VERSION DEL PROYECTO Guardado 04/08/2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="4ta VERSION DEL PROYECTO Guardado 04/08/2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
@@ -337,10 +388,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596487971281" />
-    <state x="996" y="173" key="FileChooserDialogImpl" timestamp="1596480435791">
+    <state x="996" y="173" key="FileChooserDialogImpl" timestamp="1596653691652">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="996" y="173" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596480435791" />
+    <state x="996" y="173" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596653691652" />
     <state x="784" y="439" key="Github.CreateGistDialog" timestamp="1596477327042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -353,41 +404,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1596482073181">
+    <state width="1877" height="123" key="GridCell.Tab.0.bottom" timestamp="1596655261744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1596482073181">
+    <state width="1877" height="123" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261744" />
+    <state width="1877" height="123" key="GridCell.Tab.0.center" timestamp="1596655261743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1596482073181">
+    <state width="1877" height="123" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261743" />
+    <state width="1877" height="123" key="GridCell.Tab.0.left" timestamp="1596655261742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1596482073181">
+    <state width="1877" height="123" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261742" />
+    <state width="1877" height="123" key="GridCell.Tab.0.right" timestamp="1596655261743">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596482073181" />
+    <state width="1877" height="123" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261743" />
     <state x="713" y="183" key="RollbackChangesDialog" timestamp="1596297266871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="713" y="183" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596297266871" />
-    <state x="582" y="145" key="SettingsEditor" timestamp="1596481217782">
+    <state x="884" y="173" key="SettingsEditor" timestamp="1596598970568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="582" y="145" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596481217782" />
+    <state x="884" y="173" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596598970568" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1595794519405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596298142200">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596584098207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596298142200" />
-    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595794462425">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596584098207" />
+    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596599004951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595794462425" />
+    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596599004951" />
+    <state x="790" y="310" key="svn.repositoryBrowser" timestamp="1596598995826">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="310" key="svn.repositoryBrowser/0.0.1920.1040@0.0.1920.1040" timestamp="1596598995825" />
   </component>
 </project>
