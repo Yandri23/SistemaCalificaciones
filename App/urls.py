@@ -21,7 +21,7 @@ from core import views
 urlpatterns = [
     path('', views.home, name="home"),
     path('alumnos/', views.alumnos, name="Alumnos"),
-    path('profesores/', views.profesores, name="Profesores"),
+    path('docentes/', views.docentes, name="Docentes"),
     path('calificaciones/', views.calificaciones, name="Calificaciones"),
     path('secretaria/', views.secretaria, name="secretaria"),
     path('about-me/', views.about, name="about-me"),

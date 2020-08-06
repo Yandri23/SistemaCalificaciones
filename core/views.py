@@ -6,7 +6,7 @@ html_base = """
     <ul>
         <li>   <a href="/">Inicio</a>              </li>
         <li>   <a href="/alumnos/">Alumnos</a>   </li>
-        <li>   <a href="/profesores/">Profesores</a>   </li>
+        <li>   <a href="/docentes/">Docentes</a>   </li>
         <li>   <a href="/calificaciones/">Calificaciones</a>   </li>
         <li>   <a href="/secretaria/">Secretaria</a>   </li>
         <li>   <a href="/about-me/">Acerca de</a>   </li>
@@ -37,8 +37,8 @@ def alumnos(request):
     html_response = html_base + html_response
     return HttpResponse(html_response);
 
-def profesores(request):
-    html_response = "<h1>la pagina de Profesores</h1>"
+def docentes(request):
+    html_response = "<h1>la pagina de Docentes</h1>"
     html_response = html_base + html_response
     return HttpResponse(html_response);
 
@@ -70,7 +70,7 @@ def contact(request, plantilla="contact.html"):
 def alumnos(request, plantilla="alumnos.html"):
     return render(request, plantilla)
 
-def profesores(request, plantilla="profesores.html"):
+def docentes(request, plantilla="docentes.html"):
     return render(request, plantilla)
 
 def calificaciones(request, plantilla="calificaciones.html"):

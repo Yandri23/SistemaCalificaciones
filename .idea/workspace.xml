@@ -10,13 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="5ta VERSION DEL PROYECTO Guardado 04/08/2020">
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="6ta VERSION DEL PROYECTO Guardado 05/08/2020">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/alumnos.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/alumnos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/calificaciones.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/calificaciones.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/profesores.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/profesores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/secretaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/secretaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/templates/profesores.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/docentes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +288,9 @@
       <workItem from="1596598825617" duration="452000" />
       <workItem from="1596653683066" duration="14000" />
       <workItem from="1596653724727" duration="89000" />
-      <workItem from="1596654150230" duration="1739000" />
+      <workItem from="1596654150230" duration="1930000" />
+      <workItem from="1596672186158" duration="1758000" />
+      <workItem from="1596734601417" duration="1977000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -346,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596584088865</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="6ta VERSION DEL PROYECTO Guardado 05/08/2020">
+      <created>1596656684867</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596656684867</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +386,8 @@
     <MESSAGE value="2da VERSION DEL PROYECTO Guardado 04/08/2020" />
     <MESSAGE value="3da VERSION DEL PROYECTO Guardado 04/08/2020" />
     <MESSAGE value="4ta VERSION DEL PROYECTO Guardado 04/08/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="4ta VERSION DEL PROYECTO Guardado 04/08/2020" />
+    <MESSAGE value="6ta VERSION DEL PROYECTO Guardado 05/08/2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="6ta VERSION DEL PROYECTO Guardado 05/08/2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
@@ -404,22 +414,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="123" key="GridCell.Tab.0.bottom" timestamp="1596655261744">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom" timestamp="1596736267870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261744" />
-    <state width="1877" height="123" key="GridCell.Tab.0.center" timestamp="1596655261743">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596736267870" />
+    <state width="1877" height="213" key="GridCell.Tab.0.center" timestamp="1596736267870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261743" />
-    <state width="1877" height="123" key="GridCell.Tab.0.left" timestamp="1596655261742">
+    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596736267870" />
+    <state width="1877" height="213" key="GridCell.Tab.0.left" timestamp="1596736267870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261742" />
-    <state width="1877" height="123" key="GridCell.Tab.0.right" timestamp="1596655261743">
+    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596736267870" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right" timestamp="1596736267870">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596655261743" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596736267870" />
     <state x="713" y="183" key="RollbackChangesDialog" timestamp="1596297266871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -432,10 +442,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596584098207">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596656700007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596584098207" />
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596656700007" />
     <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596599004951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
