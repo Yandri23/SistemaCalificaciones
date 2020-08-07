@@ -11,7 +11,6 @@ html_base = """
         <li>   <a href="/secretaria/">Secretaria</a>   </li>
         <li>   <a href="/about-me/">Acerca de</a>   </li>
         <li>   <a href="/contact/">Contacto</a>     </li>
-        <li>   <a href="/portfolio/">porfolio</a>     </li>
     </ul>
 """
 
@@ -77,7 +76,4 @@ def calificaciones(request, plantilla="calificaciones.html"):
     return render(request, plantilla)
 
 def secretaria(request, plantilla="secretaria.html"):
-    return render(request, plantilla)
-
-def portfolio(request, plantilla="portfolio.html"):
     return render(request, plantilla)
