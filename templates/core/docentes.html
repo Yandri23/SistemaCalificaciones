@@ -1,0 +1,48 @@
+{% extends "core/base.html" %}
+{% block title %} portfolio {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Calificaciones-bg.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <div class="container">
+        <div class="col-md-8" style="margin-top: 70px;">
+
+            <h2> Docentes </h2>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Email</th>
+
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for docente in docentes %}
+                        <tr>
+                            <td>{{ docente.nombre }}</td>
+                            <td>{{ docente.apellido }}</td>
+                            <td>{{ docente.edad }}</td>
+                            <td>{{ docente.email }}</td>
+
+                            <td><a class="nav-link" href="{% url 'modificardocente' docente.id %}">editar</a></td>
+                            <td><a class="nav-link" href="{% url 'eliminardocente' docente.id %}">elimina</a></td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="nav-link" href="{% url 'creardocente' %}">Crear Nuevo Docente</a>
+
+
+        </div>
+    </div>
+
+{% endblock %}

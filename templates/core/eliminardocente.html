@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+{% block title %} Eliminar Docente {% endblock title %}
+{% block background %}{%load static%}{% static 'img/about-bg.jpg' %}{% endblock %}
+{% block yandri %}
+    <h2> Eliminar Docente </h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ formDocente.as_p  }}
+
+
+        <input type="submit" value="Eliminar Docente" />
+    </form>
+{% endblock %}
