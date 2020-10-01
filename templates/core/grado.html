@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+{% block title %} Grado {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Calificaiones.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <div class="container">
+        <div class="col-md-8" style="margin-top: 100px;">
+
+            <h2> Grado </h2>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Grado</th>
+
+
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for g in grado %}
+                        <tr>
+                            <td>{{ g.grado }}</td>
+
+                            <td><a class="nav-link" href="{% url 'modificargrado' g.id %}">Editar</a></td>
+                            <td><a class="nav-link" href="{% url 'eliminargrado' g.id %}">Elimina</a></td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="nav-link" href="{% url 'creargrado' %}">Crear Nuevo Grado</a>
+
+
+        </div>
+    </div>
+
+{% endblock %}

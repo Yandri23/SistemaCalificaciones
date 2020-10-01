@@ -1,0 +1,47 @@
+{% extends "core/base.html" %}
+{% block title %} portfolio {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <div class="container">
+        <div class="col-md-8" style="margin-top: 100px;">
+
+            <h2> Consulta </h2>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Docente</th>
+                        <th>Estudiante</th>
+                        <th>Grado</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for c in consultadocenteestudiantegrado %}
+                        <tr>
+                            <td>{{ c.docente }}</td>
+                            <td>{{ c.estudiante }}</td>
+                            <td>{{ c.grado }}</td>
+
+
+                       <td>  <a class="nav-link" href="{% url 'modificarconsulta' c.id  %}">Modificar</a> </td>
+                       <td>  <a class="nav-link" href="{% url 'eliminarconsulta' c.id  %}">Eliminar</a> </td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="nav-link" href="{% url 'crearconsulta' %}">Crear Consulta</a>
+
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

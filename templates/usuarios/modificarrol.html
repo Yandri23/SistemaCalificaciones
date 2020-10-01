@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+{% block title %} portfolio {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/inicio.jpg' %}{% endblock %}
+
+
+{% block header %}
+ <form method="post">
+        {% csrf_token %}
+       {{ form.as_p  }}
+
+        <input type="submit" value="modificar">
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+{% endblock %}

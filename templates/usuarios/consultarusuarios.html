@@ -1,0 +1,49 @@
+{% extends "core/base.html" %}
+{% block title %} portfolio {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/inicio.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <div class="container">
+        <div class="col-md-8" style="margin-top: 100px;">
+
+            <h2> Usuarios </h2>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                         <th>Id</th>
+                        <th>Username</th>
+                         <th>Rol</th>
+
+                        <th>Editar</th>
+                          <th>Eliminar</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for u in usuarios %}
+                        <tr>
+                         <td>{{ u.id }}</td>
+                            <td>{{ u.username }}</td>
+                            <td>{{ u.rolusuario.rol.nombre }}</td>
+
+
+                        <td>  <a class="nav-link" href="{% url 'modificarusuario' u.id  %}"> Modificar </a> </td>
+
+                        <td>  <a class="nav-link" href="{% url 'eliminarusuario' u.id  %}"> Eliminar </a> </td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="nav-link" href="{% url 'crearusuario' %}">Crear Usuario</a>
+
+
+        </div>
+    </div>
+
+{% endblock %}

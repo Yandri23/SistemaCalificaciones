@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+{% block title %} Crear Grado {% endblock title %}
+
+
+{% block yandri %}
+    <h2> Crear Grado </h2>
+    <form method="POST" action = "{% url 'creargrado' %}">
+        {% csrf_token %}
+        {{ formGrado.as_p  }}
+
+
+        <input type="submit" value="Crear Grado" />
+    </form>
+{% endblock %}

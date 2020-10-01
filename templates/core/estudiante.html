@@ -1,12 +1,12 @@
 {% extends "core/base.html" %}
-{% block title %} Docentes {% endblock %}
-{% block imagen %}{% load static %} {% static 'img/Docente-bg.jpg' %}{% endblock %}
+{% block title %} Estudiante {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Estudiante-bg.jpg' %}{% endblock %}
 
 {% block yandri %}
     <div class="container">
         <div class="col-md-8" style="margin-top: 100px;">
 
-            <h2> Docentes </h2>
+            <h2> Estudiante </h2>
 
             <div class="table-responsive">
                 <table class="table">
@@ -23,15 +23,15 @@
                     </thead>
                     <tbody>
 
-                    {% for docente in docentes %}
+                    {% for estudiante in estudiante %}
                         <tr>
-                            <td>{{ docente.nombre }}</td>
-                            <td>{{ docente.apellido }}</td>
-                            <td>{{ docente.edad }}</td>
-                            <td>{{ docente.email }}</td>
+                            <td>{{ estudiante.nombre }}</td>
+                            <td>{{ estudiante.apellido }}</td>
+                            <td>{{ estudiante.edad }}</td>
+                            <td>{{ estudiante.email }}</td>
 
-                            <td><a class="nav-link" href="{% url 'modificardocente' docente.id %}">editar</a></td>
-                            <td><a class="nav-link" href="{% url 'eliminardocente' docente.id %}">elimina</a></td>
+                            <td><a class="nav-link" href="{% url 'modificarestudiante' estudiante.id %}">Editar</a></td>
+                            <td><a class="nav-link" href="{% url 'eliminarestudiante' estudiante.id %}">Eliminar</a></td>
 
                         </tr>
                     {% endfor %}
@@ -39,7 +39,7 @@
                 </table>
             </div>
 
-            <a class="nav-link" href="{% url 'creardocente' %}">Crear Nuevo Docente</a>
+            <a class="nav-link" href="{% url 'crearestudiante' %}">Crear Nuevo estudiante</a>
 
 
         </div>

@@ -1,0 +1,51 @@
+{% extends "core/base.html" %}
+{% block title %} portfolio {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/inicio.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <div class="container">
+        <div class="col-md-8" style="margin-top: 100px;">
+
+            <h2> Roles con Usuarios Asociados </h2>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                         <th>Id</th>
+                        <th>Rol</th>
+                        <th>Usuario</th>
+
+                        <th>Editar</th>
+                          <th>Eliminar</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for r in rolesusuarios %}
+                        <tr>
+                            <td>{{ r.id }}</td>
+                            <td>{{ r.rol }}</td>
+                            <td>{{ r.usuario }}</td>
+
+
+                        <td>  <a class="nav-link" href="{% url 'modificarrolusuario' r.id  %}">Modificar</a> </td>
+
+                        <td>  <a class="nav-link" href="{% url 'eliminarrolusuario' r.id  %}">Eliminar</a> </td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="nav-link" href="{% url 'crearrolusuario' %}">Crear Rol Usuario</a>
+
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

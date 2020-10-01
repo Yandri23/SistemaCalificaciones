@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+{% block title %} Modificar Consulta {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <h2> Modificar Consulta </h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ formConsulta.as_p  }}
+
+
+        <input type="submit" value="Modificar Consulta" />
+    </form>
+{% endblock %}

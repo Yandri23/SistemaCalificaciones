@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+{% block title %} Eliminar Estudiante {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Estudiante-bg.jpg' %}{% endblock %}
+{% block yandri %}
+    <h2> Eliminar Estudiante </h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ formEstudiante.as_p  }}
+
+
+        <input type="submit" value="Eliminar Estudiante" />
+    </form>
+{% endblock %}

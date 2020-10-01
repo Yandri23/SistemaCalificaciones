@@ -9,53 +9,84 @@
     <title> SISTEMA ACADEMICO EDBP </title>
 
     <!-- Estilos y fuentes del template  -->
-      {% load static %}
-    <link href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
-    <link href=" {% static 'vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet' %}" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="{% static 'css/clean-blog.min.css'%} " rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
 
+</head>
 
-  </head>
-
-  <body>
+<body>
 
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">SISTEMA ACADEMICO</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menú
-          <i class="fa fa-bars"></i>
+        <a class="navbar-brand" href="{% url 'home' %}"> Hola {% if user %} {{ request.user.username }}
+            {{ user.rolusuario.rol }} {% endif %}    </a>
+        <a class="navbar-brand" href="{% url 'logout' %}">Salir</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menú
+            <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Portada</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="{% url 'Alumnos' %}">alumnos</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="{% url 'Calificaciones' %}">calificaciones</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="{% url 'Docentes' %}">docentes</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="{% url 'secretaria' %}">secretaria</a>
-            </li>
-               <li class="nav-item">
-              <a class="nav-link" href="{% url 'about-me' %}">Acerca de</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+        {% if request.user.is_authenticated %}
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+    {% if user.rolusuario.rol.nombre == "DOCENTE"  %}
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">INICIO</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'Calificaciones' %}">Calificaciones</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'secretaria' %}">secretaria</a>
+                <ul>
+                    <li><a href="{% url 'Docentes' %}">Docentes</a></li>
+                    <li><a href="{% url 'estudiante' %}">Estudiante</a></li>
+                    <li><a href="{% url 'grado' %}">Grado</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'consulta' %}">Consulta</a>
+                </li>
+
+    {% endif %}
+
+                  {% comment %}<li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+                </li>{% endcomment %}
+
+    {% if user.rolusuario.rol.nombre == "ADMINISTRADOR" or user.rolusuario.rol == "" %}
+
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'consultarusuarios' %}">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'consultarroles' %}">Roles</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'consultarrolesusuarios' %}">Roles y Usuarios</a>
+                </li>
+
+    {% endif %}
+
+                </ul>
+            </div>
+        {% else %}
+            <p>Please login to see this page.</p>
+        {% endif %}
+
+    </div>
+</nav>
+
 
     <!-- Cabecera -->
     <header class="masthead" style="background-image: url('{% block imagen %} {% endblock %}')">
@@ -64,15 +95,20 @@
         <div class="row">
           <div class="col-lg-15 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1> ESCUELA PARTICULAR ESPERANZA DE BASTION POPULAR </h1>
+
+            {% comment %}
+              <h1> ESCUELA PARTICULAR ESPERANZA DE BASTION POPULAR </h1>{% endcomment %}
               <span class="subheading"> GRUPO 7 DESARROLLO DE SOFTWARE </span>
+                     {% block header %} {% endblock %}
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    {% block yandri %} {% endblock %}
+<!-- Contenido -->
+
+{% block yandri %} {% endblock %}
 
 
     <!-- Pié de página -->
@@ -111,6 +147,9 @@
         </div>
       </div>
     </footer>
+
+
+
 
     <!-- Bootstrap y Javascripts -->
     {% load static %}

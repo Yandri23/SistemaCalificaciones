@@ -1,21 +1,25 @@
 from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser
-
+from django.core import validators
+from django.core.validators import RegexValidator, validate_email
+from django.urls import reverse
 from django.contrib.auth.models import User, PermissionsMixin, AbstractUser
 
+from django.utils import timezone
 
 
 # Create your models here.
-class Curso(models.Model):
-    nombre = models.CharField(max_length=50)
+
+class Grado(models.Model):
+    grado = models.CharField(max_length=50)
 
     class Meta:
-        db_table = "tr_curso"
-        verbose_name = "curso"
-        verbose_name_plural = "cursos"
+        db_table = "tr_grado"
+        verbose_name = "grado"
+        verbose_name_plural = "grados"
 
     def __str__(self):
-        return self.nombre
+        return self.grado
 
 
 class Materia(models.Model):
@@ -58,6 +62,7 @@ class Estudiante(models.Model):
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
     edad = models.IntegerField(default=10)
+    email = models.EmailField(default="@itsgg.edu.ec")
     sexo = models.CharField(max_length=1)
     estado = models.IntegerField(default=1)  # 1 es activo y 2 es eliminado
     user = models.CharField(max_length=20)
@@ -74,11 +79,12 @@ class Estudiante(models.Model):
         return self.apellido
 
 
-class CursoDocenteEstudiannte(models.Model):
-    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+class Consulta(models.Model):
+    grado = models.ForeignKey(Grado, on_delete=models.CASCADE)
     docente = models.ForeignKey(Docente, on_delete=models.CASCADE)
     estudiante = models.ForeignKey(Estudiante, on_delete=models.CASCADE)
-    materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
 
     class Meta:
-        db_table = "tr_cursodocenteestudiante"
+        db_table = "tr_consulta"
+        verbose_name = "consulta"
+        verbose_name_plural = "consultas"
