@@ -10,53 +10,72 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="7ta VERSION DEL PROYECTO Guardado 06/08/2020">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/alumnos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/calificaciones.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/consultardocente.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/creardocente.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/docentes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/eliminardocente.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/modificardocente.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/core/secretaria.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/usuarios/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/usuarios/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usuarios/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/App 2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/App 2.iml" afterDir="false" />
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="Base De Datos">
+      <change afterPath="$PROJECT_DIR$/core/static/css/varios.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/static/img/Calificaiones.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/static/img/Consulta.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/static/img/Docente-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/static/img/Estudiante-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/static/img/INICIO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/consulta.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/consultarestudiante.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/consultargrado.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/crearconsulta.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/crearestudiante.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/creargrado.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/eliminarconsulta.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/eliminarestudiante.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/eliminargrado.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/estudiante.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/grado.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/modificarconsulta.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/modificarestudiante.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/modificargrado.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/consultarroles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/consultarrolesusuarios.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/consultarusuarios.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/crearrol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/crearrolusuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/crearusuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/eliminarrol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/eliminarrolusuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/eliminarusuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/modificarrol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/modificarrolusuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/modificarusuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/usuarios/password_reset_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuarios/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuarios/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/alumnos.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/calificaciones.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/docentes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/secretaria.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/img/Calificaciones-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/img/about-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/img/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/img/contact-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/static/img/home.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/SQLITE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/alumnos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/calificaciones.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/calificaciones.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/creardocente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/creardocente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/docentes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/docentes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/eliminardocente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/eliminardocente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/modificardocente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/modificardocente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/secretaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/secretaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usuarios/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuarios/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usuarios/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuarios/password_reset_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +88,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -96,7 +115,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../App" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -107,7 +126,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.App 2">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="Sistema Calificaciones" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,6 +187,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="App 2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/models.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -293,6 +334,11 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -343,7 +389,37 @@
       <workItem from="1599241482621" duration="455000" />
       <workItem from="1599254976191" duration="2032000" />
       <workItem from="1599258711265" duration="5140000" />
-      <workItem from="1599264023318" duration="327000" />
+      <workItem from="1599264023318" duration="665000" />
+      <workItem from="1599310528796" duration="1291000" />
+      <workItem from="1599317750706" duration="631000" />
+      <workItem from="1599490856372" duration="8309000" />
+      <workItem from="1599576020387" duration="2402000" />
+      <workItem from="1599579036748" duration="493000" />
+      <workItem from="1599610069269" duration="3550000" />
+      <workItem from="1599662429292" duration="19951000" />
+      <workItem from="1599695325905" duration="2026000" />
+      <workItem from="1599707736395" duration="5956000" />
+      <workItem from="1599913999315" duration="4873000" />
+      <workItem from="1600184542955" duration="499000" />
+      <workItem from="1600212735617" duration="3574000" />
+      <workItem from="1600300778063" duration="664000" />
+      <workItem from="1600525769373" duration="1018000" />
+      <workItem from="1600527261538" duration="80000" />
+      <workItem from="1600527644248" duration="68000" />
+      <workItem from="1600527729773" duration="26000" />
+      <workItem from="1600528016020" duration="158000" />
+      <workItem from="1600528196400" duration="80000" />
+      <workItem from="1600528524221" duration="100000" />
+      <workItem from="1600701586614" duration="3213000" />
+      <workItem from="1600959861589" duration="1506000" />
+      <workItem from="1601044989371" duration="5117000" />
+      <workItem from="1601222203992" duration="2424000" />
+      <workItem from="1601224721990" duration="1621000" />
+      <workItem from="1601490889196" duration="1496000" />
+      <workItem from="1601510625239" duration="1298000" />
+      <workItem from="1601511954376" duration="1212000" />
+      <workItem from="1601558315092" duration="5655000" />
+      <workItem from="1601564029030" duration="10042000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -415,7 +491,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596736620015</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="8ta VERSION DEL PROYECTO Guardado 04/09/2020">
+      <created>1599264591197</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1599264591197</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Base De Datos">
+      <created>1599680461707</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1599680461707</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,25 +538,27 @@
     <MESSAGE value="4ta VERSION DEL PROYECTO Guardado 04/08/2020" />
     <MESSAGE value="6ta VERSION DEL PROYECTO Guardado 05/08/2020" />
     <MESSAGE value="7ta VERSION DEL PROYECTO Guardado 06/08/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="7ta VERSION DEL PROYECTO Guardado 06/08/2020" />
+    <MESSAGE value="8ta VERSION DEL PROYECTO Guardado 04/09/2020" />
+    <MESSAGE value="Base De Datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base De Datos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="698" y="343" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1596477390292" />
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599175786168">
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601511512021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599175786168" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601511512021" />
     <state x="718" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599162318945">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599162318945" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599161193448">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599678270421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599161193448" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599678270421" />
     <state x="996" y="173" key="FileChooserDialogImpl" timestamp="1599161741410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -483,22 +575,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1599264308782">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1601572842969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599264308782" />
-    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1599264308782">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601572842969" />
+    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1601572842969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599264308782" />
-    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1599264308782">
+    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601572842969" />
+    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1601572842969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599264308782" />
-    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1599264308782">
+    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601572842969" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1601572842969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599264308782" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601572842969" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1599161146396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -515,17 +607,32 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1596736636308">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1599264619832">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596736636308" />
-    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596599004951">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599264619832" />
+    <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601563986175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596599004951" />
+    <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601563986175" />
+    <state x="766" y="29" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1601511644491">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="766" y="29" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601511644491" />
+    <state x="756" y="340" width="408" height="356" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1599667512016">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="340" width="408" height="356" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599667512016" />
+    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599680503998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599680503998" />
     <state x="790" y="310" key="svn.repositoryBrowser" timestamp="1596598995826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="310" key="svn.repositoryBrowser/0.0.1920.1040@0.0.1920.1040" timestamp="1596598995825" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Sistema_Calificaciones$models.coverage" NAME="models Coverage Results" MODIFIED="1599669951167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
 </project>
