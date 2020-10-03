@@ -1,10 +1,10 @@
 {% extends "core/base.html" %}
-{% block title %} portfolio {% endblock %}
+{% block title %} Consulta {% endblock %}
 {% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
 
 {% block yandri %}
     <div class="container">
-        <div class="col-md-8" style="margin-top: 100px;">
+        <div class="col-md-10" style="margin-top: 100px;">
 
             <h2> Consulta </h2>
 
@@ -16,32 +16,39 @@
                         <th>Estudiante</th>
                         <th>Grado</th>
 
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+
                     </tr>
                     </thead>
                     <tbody>
 
-                    {% for c in consultadocenteestudiantegrado %}
+                    {% for d in docente %}
+                    {% for e in estudiante %}
+                    {% for g in grado %}
+
                         <tr>
-                            <td>{{ c.docente }}</td>
-                            <td>{{ c.estudiante }}</td>
-                            <td>{{ c.grado }}</td>
+                            <td>{{ d.nombre }}</td>
+                            <td>{{ e.nombre }}</td>
+                            <td>{{ g.grado }}</td>
 
-
-                       <td>  <a class="nav-link" href="{% url 'modificarconsulta' c.id  %}">Modificar</a> </td>
-                       <td>  <a class="nav-link" href="{% url 'eliminarconsulta' c.id  %}">Eliminar</a> </td>
+                            <td><a class="nav-link" href="{% url 'modificarconsulta' d.id %}">Editar</a></td>
+                            <td><a class="nav-link" href="{% url 'eliminarconsulta' d.id %}">Eliminar</a></td>
 
                         </tr>
+
                     {% endfor %}
+                    {% endfor %}
+                    {% endfor %}
+
                     </tbody>
                 </table>
             </div>
 
-            <a class="nav-link" href="{% url 'crearconsulta' %}">Crear Consulta</a>
+            <a class="nav-link" href="{% url 'crearconsulta' %}">Nueva Consulta</a>
 
 
         </div>
     </div>
-
-
 
 {% endblock %}
