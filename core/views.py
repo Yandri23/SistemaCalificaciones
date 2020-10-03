@@ -4,8 +4,6 @@ from django.contrib.auth import authenticate, login
 from .models import Docente, Estudiante, Grado, Consulta
 from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm
 
-
-
 # Create your views here.
 html_base = """
     <h1>Mi Menu</h1>
@@ -23,32 +21,31 @@ html_base = """
 """
 
 
-
-#def home(request):
+# def home(request):
 #    html_response = "<h1>la pagina de Portadas</h1>"
 #    html_response = html_base + html_response
 #    return HttpResponse(html_response);
-#def contact(request):
+# def contact(request):
 #    html_response = "<h1>la pagina de Contacto</h1>"
 #    html_response = html_base + html_response
 #    return HttpResponse(html_response);
-#def about(request):
+# def about(request):
 #    html_response = "<h1>la pagina de Acerca de</h1>"
 #    html_response = html_base + html_response
 #    return HttpResponse(html_response);
-#def alumnos(request):
+# def alumnos(request):
 #    html_response = "<h1>la pagina de Alumnos</h1>"
 #    html_response = html_base + html_response
 #    return HttpResponse(html_response);
-#def docentes(request):
+# def docentes(request):
 #    html_response = "<h1>la pagina de Docentes</h1>"
 #    html_response = html_base + html_response
 #    return HttpResponse(html_response);
-#def calificaciones(request):
+# def calificaciones(request):
 #    html_response = "<h1>la pagina de Calificaciones</h1>"
 #    html_response = html_base + html_response
 #    return HttpResponse(html_response);
-#def secretaria(request):
+# def secretaria(request):
 #    html_response = "<h1>la pagina de Secretaria</h1>"
 #    html_response = html_base + html_response
 #    return HttpResponse(html_response);
@@ -62,31 +59,33 @@ html_base = """
 def home(request, plantilla="core/home.html"):
     return render(request, plantilla)
 
-#def consulta(request, plantilla="core/consulta.html"):
+
+# def consulta(request, plantilla="core/consulta.html"):
 #    return render(request, plantilla)
 
 def about(request, plantilla="core/about.html"):
     return render(request, plantilla)
 
+
 def contact(request, plantilla="core/contact.html"):
     return render(request, plantilla)
 
-#def estudiante(request, plantilla="core/estudiante.html"):
+
+# def estudiante(request, plantilla="core/estudiante.html"):
 #    return render(request, plantilla)
 
-#def grado(request, plantilla="core/grado.html"):
+# def grado(request, plantilla="core/grado.html"):
 #    return render(request, plantilla)
 
-#def docentes(request, plantilla="core/docentes.html"):
+# def docentes(request, plantilla="core/docentes.html"):
 #    return render(request, plantilla)
 
 def calificaciones(request, plantilla="core/calificaciones.html"):
     return render(request, plantilla)
 
+
 def secretaria(request, plantilla="core/secretaria.html"):
     return render(request, plantilla)
-
-
 
 
 def home(request, plantilla='core/home.html'):
@@ -94,20 +93,24 @@ def home(request, plantilla='core/home.html'):
         return render(request, plantilla)
     return redirect('login')
 
-#@login_required(None,"", 'loging')
+
+# @login_required(None,"", 'loging')
 def docentes(request, plantilla="core/docentes.html"):
     docentes = list(Docente.objects.all())
     return render(request, plantilla, {'docentes': docentes})
 
+
 def estudiante(request, plantilla="core/estudiante.html"):
     estudiante = list(Estudiante.objects.all())
     return render(request, plantilla, {'estudiante': estudiante})
+
 
 def consulta(request, plantilla="core/consulta.html"):
     docente = list(Docente.objects.all())
     estudiante = list(Estudiante.objects.all())
     grado = list(Grado.objects.all())
     return render(request, plantilla, {'docente': docente, 'estudiante': estudiante, 'grado': grado})
+
 
 def grado(request, plantilla="core/grado.html"):
     grado = list(Grado.objects.all())
@@ -125,8 +128,6 @@ def planificacion(request, plantilla="core/planificacion.html"):
 # take the second element for sort
 def take_second(elem):
     return elem[1]
-
-
 
 
 ## CREAR DOCENTE CRUD
@@ -172,7 +173,6 @@ def eliminardocente(request, pk, plantilla="core/eliminardocente.html"):
 ## CONSULTAR DOCENTE CRUD
 def consultardocente(request, plantilla="core/consultardocente.html"):
     return render(request, plantilla)
-
 
 
 ################## ALUMNO CRUD  ##################
@@ -221,6 +221,7 @@ def eliminarestudiante(request, pk, plantilla="core/eliminarestudiante.html"):
 def consultarestudiante(request, plantilla="core/consultarestudiante.html"):
     return render(request, plantilla)
 
+
 ################## CURSO CRUD  ##################
 
 ## CREAR CURSO CRUD
@@ -235,6 +236,7 @@ def creargrado(request, plantilla="core/creargrado.html"):
         formGrado = GradoForm()
     return render(request, plantilla, {'formGrado': formGrado})
 
+
 ## MODIFICAR CURSO CRUD
 def modificargrado(request, pk, plantilla="core/modificargrado.html"):
     if request.method == "POST":
@@ -248,8 +250,9 @@ def modificargrado(request, pk, plantilla="core/modificargrado.html"):
         formGrado = GradoForm(request.POST or None, instance=grado)
     return render(request, plantilla, {'formGrado': formGrado})
 
+
 ## ELIMINAR CURSO CRUD
-def eliminargrado(request, pk, plantilla="core/modificargrado.html"):
+def eliminargrado(request, pk, plantilla="core/eliminargrado.html"):
     if request.method == "POST":
         grado = get_object_or_404(Grado, pk=pk)
         formGrado = GradoForm(request.POST or None, instance=grado)
@@ -261,10 +264,10 @@ def eliminargrado(request, pk, plantilla="core/modificargrado.html"):
         formGrado = GradoForm(request.POST or None, instance=grado)
     return render(request, plantilla, {'formGrado': formGrado})
 
+
 ## CONSULTAR CURSO CRUD
 def consultargrado(request, plantilla="core/consultargrado.html"):
     return render(request, plantilla)
-
 
 
 ################## CONSULTA CRUD  ##################
@@ -272,28 +275,28 @@ def consultargrado(request, plantilla="core/consultargrado.html"):
 ## CREAR CONSULTA CRUD
 
 def crearconsulta(request, plantilla="core/crearconsulta.html"):
-        if request.method == "POST":
-            formConsulta = ConsultaForm(request.POST)
-            if formConsulta.is_valid():
-                formConsulta.save()
-                return redirect("consulta")
-        else:
-            formConsulta = ConsultaForm()
-        return render(request, plantilla, {'formConsulta': formConsulta})
+    if request.method == "POST":
+        formConsulta = ConsultaForm(request.POST)
+        if formConsulta.is_valid():
+            formConsulta.save()
+            return redirect("consulta")
+    else:
+        formConsulta = ConsultaForm()
+    return render(request, plantilla, {'formConsulta': formConsulta})
 
 
 ## MODIFICAR CONSULTA CRUD
 def modificarconsulta(request, pk, plantilla="core/modificarconsulta.html"):
-        if request.method == "POST":
-            consulta = get_object_or_404(Consulta, pk=pk)
-            formConsulta = ConsultaForm(request.POST or None, instance=consulta)
-            if formConsulta.is_valid():
-                formConsulta.save()
-            return redirect("consulta")
-        else:
-            consulta = get_object_or_404(Consulta, pk=pk)
-            formConsulta = ConsultaForm(request.POST or None, instance=consulta)
-        return render(request, plantilla, {'formConsulta': formConsulta})
+    if request.method == "POST":
+        consulta = get_object_or_404(Consulta, pk=pk)
+        formConsulta = ConsultaForm(request.POST or None, instance=consulta)
+        if formConsulta.is_valid():
+            formConsulta.save()
+        return redirect("consulta")
+    else:
+        consulta = get_object_or_404(Consulta, pk=pk)
+        formConsulta = ConsultaForm(request.POST or None, instance=consulta)
+    return render(request, plantilla, {'formConsulta': formConsulta})
 
 
 ## ELIMINAR CONSULTA CRUD
@@ -308,6 +311,7 @@ def eliminarconsulta(request, pk, plantilla="core/eliminarconsulta.html"):
         consulta = get_object_or_404(Consulta, pk=pk)
         formConsulta = ConsultaForm(request.POST or None, instance=consulta)
     return render(request, plantilla, {'formConsulta': formConsulta})
+
 
 ## CONSULTAR CONSULTA CRUD
 def consultarconsulta(request, plantilla="core/consultarconsulta.html"):

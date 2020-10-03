@@ -26,7 +26,7 @@
                             <td>{{ g.grado }}</td>
 
                             <td><a class="nav-link" href="{% url 'modificargrado' g.id %}">Editar</a></td>
-                            <td><a class="nav-link" href="{% url 'eliminargrado' g.id %}">Elimina</a></td>
+                            <td><a class="nav-link" href="{% url 'eliminargrado' g.id %}">Eliminar</a></td>
 
                         </tr>
                     {% endfor %}
@@ -34,7 +34,7 @@
                 </table>
             </div>
 
-            <a class="nav-link" href="{% url 'creargrado' %}">Crear Nuevo Grado</a>
+            <a class="nav-link" href="{% url 'creargrado' %}"> Nuevo Grado </a>
 
 
         </div>

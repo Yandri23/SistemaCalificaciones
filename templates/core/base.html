@@ -43,9 +43,10 @@
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}">INICIO</a>
                 </li>
+        {% comment %}
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'Calificaciones' %}">Calificaciones</a>
-                </li>
+                </li>{% endcomment %}
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'secretaria' %}">secretaria</a>
                 <ul>
@@ -81,7 +82,7 @@
                 </ul>
             </div>
         {% else %}
-            <p>Please login to see this page.</p>
+            <p>Inicie sesión para Continuar...</p>
         {% endif %}
 
     </div>
@@ -97,9 +98,13 @@
             <div class="site-heading">
 
             {% comment %}
-              <h1> ESCUELA PARTICULAR ESPERANZA DE BASTION POPULAR </h1>{% endcomment %}
+              <h1> ESCUELA PARTICULAR ESPERANZA DE BASTION POPULAR </h1>
+            {% endcomment %}
+
               <span class="subheading"> GRUPO 7 DESARROLLO DE SOFTWARE </span>
-                     {% block header %} {% endblock %}
+              {% block header %}
+
+              {% endblock %}
             </div>
           </div>
         </div>
