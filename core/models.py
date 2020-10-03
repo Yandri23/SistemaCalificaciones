@@ -53,6 +53,7 @@ class Docente(models.Model):
         db_table = "tr_docente"
         verbose_name = "docente"
         verbose_name_plural = "docentes"
+        ordering = ['apellido']
 
     def __str__(self):
         return self.apellido + ' ' + self.nombre
@@ -74,6 +75,7 @@ class Estudiante(models.Model):
         db_table = "tr_estudiante"
         verbose_name = "estudiante"
         verbose_name_plural = "estudiantes"
+        ordering = ['apellido']
 
     def __str__(self):
         return self.apellido

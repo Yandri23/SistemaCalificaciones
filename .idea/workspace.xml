@@ -10,13 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="Version 03/10/2020&#10;7:46">
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="Version 03/10/2020&#10;7:59">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQLITE" beforeDir="false" afterPath="$PROJECT_DIR$/SQLITE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/docentes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/docentes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/eliminardocente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/eliminardocente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/estudiante.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/estudiante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/modificargrado.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/modificargrado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +366,7 @@
       <workItem from="1601576478219" duration="1100000" />
       <workItem from="1601655855623" duration="4119000" />
       <workItem from="1601698796015" duration="731000" />
-      <workItem from="1601727553834" duration="2318000" />
+      <workItem from="1601727553834" duration="10011000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -478,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601729112901</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Version 03/10/2020&#10;7:59">
+      <created>1601729932311</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601729932312</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +525,8 @@
     <MESSAGE value="Version 01/10/2020" />
     <MESSAGE value="Version 02/10/2020" />
     <MESSAGE value="Version 03/10/2020&#10;7:46" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 03/10/2020&#10;7:46" />
+    <MESSAGE value="Version 03/10/2020&#10;7:59" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 03/10/2020&#10;7:59" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
@@ -551,22 +561,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1601727889776">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1601739649651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601727889776" />
-    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1601727889775">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601739649651" />
+    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1601739649651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601727889775" />
-    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1601727889775">
+    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601739649651" />
+    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1601739649651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601727889775" />
-    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1601727889775">
+    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601739649651" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1601739649651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601727889775" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601739649651" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1599161146396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -583,14 +593,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1601729129289">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1601729943303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601729129289" />
-    <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601563986175">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601729943303" />
+    <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601738561733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601563986175" />
+    <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601738561733" />
     <state x="766" y="29" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1601511644491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

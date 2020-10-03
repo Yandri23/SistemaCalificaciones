@@ -95,7 +95,19 @@ class User(AbstractBaseUser):
         return self.is_admin
 
 
-class RolUsuario(models.Model):
-    rol = models.OneToOneField(Rol, on_delete=models.CASCADE)
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+#class RolUsuario(models.Model):
+#   rol = models.ForeignKey(Rol, on_delete=models.CASCADE)
+ #   usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+#
+ #   def __str__(self):
+  #      return self.rol_id,
 
+class RolUsuario(models.Model):
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    rol = models.ForeignKey(Rol, on_delete=models.CASCADE)
+    class Meta:
+        db_table = "rolusuario"
+        verbose_name = "rolusuario"
+        verbose_name_plural = "rolusuarios"
+    def __str__(self):
+        return self.rol_id
