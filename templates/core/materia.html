@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+{% block title %} Materia {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Materias.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <div class="container">
+        <div class="col-md-10" style="margin-top: 100px;">
+
+            <h2> Materia </h2>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Materia</th>
+
+
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for d in materia %}
+                        <tr>
+                            <td>{{ d.materia }}</td>
+
+                            <td><a class="nav-link" href="{% url 'materiamodificar' d.id %}">Editar</a></td>
+                            <td><a class="nav-link" href="{% url 'materiaeliminar' d.id %}">Eliminar</a></td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="nav-link" href="{% url 'materiacrear' %}"> Nuevo </a>
+
+
+        </div>
+    </div>
+
+{% endblock %}

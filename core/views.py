@@ -1,8 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login
-from .models import Docente, Estudiante, Grado, Consulta
-from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm
+from .models import Docente, Estudiante, Grado, Consulta, Materia
+from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm, MateriaForm
 
 # Create your views here.
 html_base = """
@@ -117,9 +117,9 @@ def grado(request, plantilla="core/grado.html"):
     return render(request, plantilla, {'grado': grado})
 
 
-def materias(request, plantilla="core/materias.html"):
-    return render(request, plantilla)
-
+def materia(request, plantilla="core/materia.html"):
+    materia = list(Materia.objects.all())
+    return render(request, plantilla, {'materia': materia})
 
 def planificacion(request, plantilla="core/planificacion.html"):
     return render(request, plantilla)
@@ -315,4 +315,50 @@ def eliminarconsulta(request, pk, plantilla="core/eliminarconsulta.html"):
 
 ## CONSULTAR CONSULTA CRUD
 def consultarconsulta(request, plantilla="core/consultarconsulta.html"):
+    return render(request, plantilla)
+
+
+################## MATERIAS CRUD  ##################
+
+## CREAR MATERIA CRUD
+
+def materiacrear(request, plantilla="core/materiacrear.html"):
+    if request.method == "POST":
+        formMateria = MateriaForm(request.POST)
+        if formMateria.is_valid():
+            formMateria.save()
+            return redirect("materia")
+    else:
+        formMateria = MateriaForm()
+    return render(request, plantilla, {'formMateria': formMateria})
+
+
+## MODIFICAR MATERIA CRUD
+def materiamodificar(request, pk, plantilla="core/materiamodificar.html"):
+    if request.method == "POST":
+        materia = get_object_or_404(Materia, pk=pk)
+        formMateria = MateriaForm(request.POST or None, instance=materia)
+        if formMateria.is_valid():
+            formMateria.save()
+        return redirect("materia")
+    else:
+        materia = get_object_or_404(Materia, pk=pk)
+        formMateria = MateriaForm(request.POST or None, instance=materia)
+    return render(request, plantilla, {'formMateria': formMateria})
+
+## ELIMINAR MATERIA CRUD
+def materiaeliminar(request, pk, plantilla="core/materiaeliminar.html"):
+    if request.method == "POST":
+        materia = get_object_or_404(Materia, pk=pk)
+        formMateria = MateriaForm(request.POST or None, instance=materia)
+        if formMateria.is_valid():
+            formMateria.save()
+        return redirect("materia")
+    else:
+        materia = get_object_or_404(Materia, pk=pk)
+        formMateria = MateriaForm(request.POST or None, instance=materia)
+    return render(request, plantilla, {'formMateria': formMateria})
+
+## CONSULTAR MATERIA CRUD
+def materiaconsultar(request, plantilla="core/materiaconsultar.html"):
     return render(request, plantilla)

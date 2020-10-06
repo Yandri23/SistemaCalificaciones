@@ -23,17 +23,16 @@ class Grado(models.Model):
 
 
 class Materia(models.Model):
-    nombre = models.CharField(max_length=50)
-
-    #cursos = models.ManyToManyField(Curso)
+    materia = models.CharField(max_length=50)
 
     class Meta:
         db_table = "tr_materia"
         verbose_name = "materia"
         verbose_name_plural = "materias"
+        ordering = ['materia']
 
     def __str__(self):
-        return self.nombre
+        return self.materia
 
 
 # Create your models here.

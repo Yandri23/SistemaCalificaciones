@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+{% block title %} Crear Materia {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Materias.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <h2> Crear Materia </h2>
+    <form method="POST" action = "{% url 'materiacrear' %}">
+        {% csrf_token %}
+        {{ formMateria.as_p  }}
+
+        <input type="submit" value="Crear Materia" />
+    </form>
+{% endblock %}

@@ -26,7 +26,7 @@ urlpatterns = [
     path('docentes/', views.docentes, name="Docentes"),
     path('calificaciones/', views.calificaciones, name="Calificaciones"),
     path('secretaria/', views.secretaria, name="secretaria"),
-    path('consulta/', views.consulta, name="consulta"),
+    #path('consulta/', views.consulta, name="consulta"),
     path('about-me/', views.about, name="about-me"),
     path('contact/', views.contact, name="contact"),
 
@@ -57,10 +57,13 @@ urlpatterns = [
     path('eliminarconsulta/<int:pk>', views.eliminarconsulta, name="eliminarconsulta"),
     path('consulta/', views.consulta, name="consulta"),
 
+##CRUD PARA LOS CONSULTA
+    path('materiacrear/', views.materiacrear, name="materiacrear"),
+    path('materiamodificar/<int:pk>', views.materiamodificar, name="materiamodificar"),
+    path('materiaeliminar/<int:pk>', views.materiaeliminar, name="materiaeliminar"),
+    path('materia/', views.materia, name="materia"),
 
 
-
-    path('materias/', views.materias, name="materias"),
     path('planificacion/', views.planificacion, name="planificacion"),
     path('usuarios/', include('usuarios.urls'), name="usuarios"),
     path('admin/', admin.site.urls),
