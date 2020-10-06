@@ -7,6 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title> SISTEMA ACADEMICO EDBP </title>
+    <style type="text/css">
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    #header
+    {
+    margin: auto;
+    width: 500px;
+    font-family: Arial ,Helvetica, sans-serif;
+    }
+    ul, ol {
+
+        list-style: none;
+    }
+    .nav li a {
+        opacity: 2;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+    .nav li a:hover{
+        background-color: #01c5cb;
+    }
+    .nav> li{
+        float: left;
+    }
+    .nav li ul{
+        display:none;
+        position: absolute;
+        min-width: 140px;
+    }
+    .nav li:hover > ul{
+        display: block;
+    }
+    </style>
 
     <!-- Estilos y fuentes del template  -->
     {% load static %}
@@ -35,37 +72,44 @@
             <i class="fa fa-bars"></i>
         </button>
 
-    {% if request.user.is_authenticated %}
+{% if request.user.is_authenticated %}
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-    {% if user.rolusuario.rol.nombre == "DOCENTE"  %}
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+{% if user.rolusuario.rol.nombre == "DOCENTE"  %}
+                <ul class="nav">
                 <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">INICIO</a>
-                </li>
-        {% comment %}
+
+                    <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                    </li>
+                {% comment %}
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'Calificaciones' %}">Calificaciones</a>
                 </li>{% endcomment %}
-                <li class="nav-item">
-                <a class="nav-link" href="{% url 'secretaria' %}">secretaria</a>
-                <ul>
+
+                    <li><a href="">Secretaria</a>
+                        <ul>
                     <li><a href="{% url 'Docentes' %}">Docentes</a></li>
                     <li><a href="{% url 'estudiante' %}">Estudiante</a></li>
                     <li><a href="{% url 'grado' %}">Grado</a></li>
-                </ul>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{% url 'consulta' %}">Consulta</a>
-                </li>
+                    <li><a href="{% url 'materia' %}">Materia</a></li>
+                        </ul>
+                     </li>
 
-    {% endif %}
+                    <li class="nav-item">
+                <a class="nav-link" href="{% url 'consulta' %}">Consulta</a>
+                    </li>
+
+                </ul>
+{% endif %}
 
                   {% comment %}<li class="nav-item">
                   <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
                 </li>{% endcomment %}
 
-    {% if user.rolusuario.rol.nombre == "ADMINISTRADOR" or user.rolusuario.rol == "" %}
+{% if user.rolusuario.rol.nombre == "ADMINISTRADOR" or user.rolusuario.rol == "" %}
+              <ul class="nav">
 
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'consultarusuarios' %}">Usuarios</a>
@@ -76,17 +120,22 @@
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'consultarrolesusuarios' %}">Roles y Usuarios</a>
                 </li>
+              </ul>
 
-    {% endif %}
+{% endif %}
 
-                </ul>
-            </div>
-        {% else %}
+        </ul>
+        </div>
+
+{% else %}
+
             <p>Inicie sesión para Continuar...</p>
-        {% endif %}
 
-    </div>
-</nav>
+{% endif %}
+
+
+        </div>
+        </nav>
 
 
     <!-- Cabecera -->
@@ -101,7 +150,10 @@
               <h1> ESCUELA PARTICULAR ESPERANZA DE BASTION POPULAR </h1>
             {% endcomment %}
 
-              <span class="subheading"> GRUPO 7 DESARROLLO DE SOFTWARE </span>
+
+              <span class="subheading"> Grupo 7 </span>
+              <span class="subheading"> DESARROLLO DE SOFTWARE </span>
+
               {% block header %}
 
               {% endblock %}
@@ -136,14 +188,6 @@
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                   </span>
-                {% comment %}</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-                  </span>{% endcomment %}
                 </a>
               </li>
             </ul>
