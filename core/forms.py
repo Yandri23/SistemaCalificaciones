@@ -24,7 +24,7 @@ class GradoForm(forms.ModelForm):
 class ConsultaForm(forms.ModelForm):
     class Meta:
         model = Consulta
-        fields = ['grado', 'docente', 'estudiante']
+        fields = ['grado', 'estudiante']
 
 
 class MateriaForm(forms.ModelForm):

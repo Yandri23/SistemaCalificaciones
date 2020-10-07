@@ -21,47 +21,10 @@ html_base = """
 """
 
 
-# def home(request):
-#    html_response = "<h1>la pagina de Portadas</h1>"
-#    html_response = html_base + html_response
-#    return HttpResponse(html_response);
-# def contact(request):
-#    html_response = "<h1>la pagina de Contacto</h1>"
-#    html_response = html_base + html_response
-#    return HttpResponse(html_response);
-# def about(request):
-#    html_response = "<h1>la pagina de Acerca de</h1>"
-#    html_response = html_base + html_response
-#    return HttpResponse(html_response);
-# def alumnos(request):
-#    html_response = "<h1>la pagina de Alumnos</h1>"
-#    html_response = html_base + html_response
-#    return HttpResponse(html_response);
-# def docentes(request):
-#    html_response = "<h1>la pagina de Docentes</h1>"
-#    html_response = html_base + html_response
-#    return HttpResponse(html_response);
-# def calificaciones(request):
-#    html_response = "<h1>la pagina de Calificaciones</h1>"
-#    html_response = html_base + html_response
-#    return HttpResponse(html_response);
-# def secretaria(request):
-#    html_response = "<h1>la pagina de Secretaria</h1>"
-#    html_response = html_base + html_response
-#    return HttpResponse(html_response);
-
-
-# Template tag
-# block content
-# extends
-# url
-
 def home(request, plantilla="core/home.html"):
     return render(request, plantilla)
 
 
-# def consulta(request, plantilla="core/consulta.html"):
-#    return render(request, plantilla)
 
 def about(request, plantilla="core/about.html"):
     return render(request, plantilla)
@@ -71,14 +34,6 @@ def contact(request, plantilla="core/contact.html"):
     return render(request, plantilla)
 
 
-# def estudiante(request, plantilla="core/estudiante.html"):
-#    return render(request, plantilla)
-
-# def grado(request, plantilla="core/grado.html"):
-#    return render(request, plantilla)
-
-# def docentes(request, plantilla="core/docentes.html"):
-#    return render(request, plantilla)
 
 def calificaciones(request, plantilla="core/calificaciones.html"):
     return render(request, plantilla)
@@ -94,31 +49,47 @@ def home(request, plantilla='core/home.html'):
     return redirect('login')
 
 
-# @login_required(None,"", 'loging')
+
+@login_required(None, "", 'login')
 def docentes(request, plantilla="core/docentes.html"):
-    docentes = list(Docente.objects.all())
+    docentes = Docente.objects.all()
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        docentes = Docente.objects.filter(apellido__contains=search_term)
     return render(request, plantilla, {'docentes': docentes})
 
 
 def estudiante(request, plantilla="core/estudiante.html"):
-    estudiante = list(Estudiante.objects.all())
+    estudiante = Estudiante.objects.all()
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        estudiante = Estudiante.objects.filter(apellido__contains=search_term)
     return render(request, plantilla, {'estudiante': estudiante})
 
 
 def consulta(request, plantilla="core/consulta.html"):
-    docente = list(Docente.objects.all())
-    estudiante = list(Estudiante.objects.all())
-    grado = list(Grado.objects.all())
-    return render(request, plantilla, {'docente': docente, 'estudiante': estudiante, 'grado': grado})
+    estudiante = Estudiante.objects.all()
+    grado = Grado.objects.all()
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        estudiante = Estudiante.objects.filter(apellido__contains=search_term)
+        grado = Grado.objects.filter(grado__contains=search_term)
+    return render(request, plantilla, {'estudiante': estudiante, 'grado': grado})
 
 
 def grado(request, plantilla="core/grado.html"):
-    grado = list(Grado.objects.all())
+    grado = Grado.objects.all()
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        grado = Grado.objects.filter(grado__contains=search_term)
     return render(request, plantilla, {'grado': grado})
 
 
 def materia(request, plantilla="core/materia.html"):
-    materia = list(Materia.objects.all())
+    materia = Materia.objects.all()
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        materia = Materia.objects.filter(materia__contains=search_term)
     return render(request, plantilla, {'materia': materia})
 
 def planificacion(request, plantilla="core/planificacion.html"):
@@ -129,6 +100,10 @@ def planificacion(request, plantilla="core/planificacion.html"):
 def take_second(elem):
     return elem[1]
 
+
+#############################################
+############    CRUB DOCENTES     ###########
+#############################################
 
 ## CREAR DOCENTE CRUD
 def creardocente(request, plantilla="core/creardocente.html"):
@@ -176,6 +151,7 @@ def consultardocente(request, plantilla="core/consultardocente.html"):
 
 
 ################## ALUMNO CRUD  ##################
+
 ## CREAR ALUMNO CRUD
 
 def crearestudiante(request, plantilla="core/crearestudiante.html"):
@@ -283,6 +259,7 @@ def crearconsulta(request, plantilla="core/crearconsulta.html"):
     else:
         formConsulta = ConsultaForm()
     return render(request, plantilla, {'formConsulta': formConsulta})
+
 
 
 ## MODIFICAR CONSULTA CRUD

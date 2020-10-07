@@ -8,6 +8,11 @@
 
             <h2> Docentes </h2>
 
+         <form class="form-control" method="GET" action="{% url 'docentes' %}">
+            <input class="form-control" type="search" name="search">
+            <button class="form-control" type="submit"> Buscar Docente</button>
+        </form>
+
             <div class="table-responsive">
                 <table class="table">
                     <thead>

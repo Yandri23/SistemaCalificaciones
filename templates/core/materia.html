@@ -7,6 +7,10 @@
         <div class="col-md-10" style="margin-top: 100px;">
 
             <h2> Materia </h2>
+        <form class="form-control" method="GET" action="{% url 'materia' %}">
+            <input class="form-control" type="search" name="search">
+            <button class="form-control" type="submit"> Buscar </button>
+        </form>
 
             <div class="table-responsive">
                 <table class="table">

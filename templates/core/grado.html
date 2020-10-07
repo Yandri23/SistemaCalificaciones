@@ -7,6 +7,10 @@
         <div class="col-md-8" style="margin-top: 100px;">
 
             <h2> Grado </h2>
+        <form class="form-control" method="GET" action="{% url 'grado' %}">
+            <input class="form-control" type="search" name="search">
+            <button class="form-control" type="submit"> Buscar Grado</button>
+        </form>
 
             <div class="table-responsive">
                 <table class="table">

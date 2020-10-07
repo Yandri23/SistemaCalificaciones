@@ -10,7 +10,7 @@ from .models import User, Rol, RolUsuario
 class RolForm(forms.ModelForm):
     class Meta:
         model = Rol
-        fields=['nombre']
+        fields = ['nombre']
 
 class RolUsuarioForm(forms.ModelForm):
     class Meta:

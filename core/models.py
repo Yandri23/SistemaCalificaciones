@@ -17,6 +17,7 @@ class Grado(models.Model):
         db_table = "tr_grado"
         verbose_name = "grado"
         verbose_name_plural = "grados"
+        ordering = ['grado']
 
     def __str__(self):
         return self.grado
@@ -81,11 +82,16 @@ class Estudiante(models.Model):
 
 
 class Consulta(models.Model):
-    grado = models.ForeignKey(Grado, on_delete=models.CASCADE)
-    docente = models.ForeignKey(Docente, on_delete=models.CASCADE)
+    grado = models.OneToOneField(Grado, on_delete=models.CASCADE)
     estudiante = models.ForeignKey(Estudiante, on_delete=models.CASCADE)
+    # docente = models.ForeignKey(Docente, on_delete=models.CASCADE)
 
     class Meta:
         db_table = "tr_consulta"
         verbose_name = "consulta"
         verbose_name_plural = "consultas"
+        ordering = ['estudiante']
+
+        def __str__(self):
+            return self.estudiante_id
+

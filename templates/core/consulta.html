@@ -1,54 +1,53 @@
 {% extends "core/base.html" %}
-{% block title %} Consulta {% endblock %}
+{% block title %} portfolio {% endblock %}
 {% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
 
 {% block yandri %}
     <div class="container">
-        <div class="col-md-10" style="margin-top: 100px;">
+        <div class="col-md-15" style="margin-top: 100px;">
 
             <h2> Consulta </h2>
+           <form class="form-control" method="GET" action="{% url 'consulta' %}">
+            <input class="form-control" type="search" name="search">
+            <button class="form-control" type="submit"> Consultar </button>
+        </form>
 
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Docente</th>
                         <th>Estudiante</th>
                         <th>Grado</th>
 
                         <th>Editar</th>
-                        <th>Eliminar</th>
+                          <th>Eliminar</th>
 
                     </tr>
                     </thead>
                     <tbody>
 
-                    {% for d in docente %}
-                    {% for e in estudiante %}
-                    {% for g in grado %}
-
+                    {% for e in consulta %}
                         <tr>
-                            <td>{{ d.nombre }}</td>
-                            <td>{{ e.nombre }}</td>
-                            <td>{{ g.grado }}</td>
+                            <td>{{ e.estudiante }}</td>
+                            <td>{{ e.grado }}</td>
 
-                            <td><a class="nav-link" href="{% url 'modificarconsulta' d.id %}">Editar</a></td>
-                            <td><a class="nav-link" href="{% url 'eliminarconsulta' d.id %}">Eliminar</a></td>
+
+                        <td>  <a class="nav-link" href="{% url 'modificarconsulta' e.id  %}">Modificar</a> </td>
+
+                        <td>  <a class="nav-link" href="{% url 'eliminarconsulta' e.id  %}">Eliminar</a> </td>
 
                         </tr>
-
                     {% endfor %}
-                    {% endfor %}
-                    {% endfor %}
-
                     </tbody>
                 </table>
             </div>
 
-            <a class="nav-link" href="{% url 'crearconsulta' %}">Nueva Consulta</a>
+            <a class="nav-link" href="{% url 'crearconsulta' %}">Crear Consulta</a>
 
 
         </div>
     </div>
+
+
 
 {% endblock %}
