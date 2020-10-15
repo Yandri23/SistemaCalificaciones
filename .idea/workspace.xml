@@ -10,23 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="Version 06/10/2020&#10;15:44">
-      <change afterPath="$PROJECT_DIR$/core/migrations/0003_auto_20201007_1132.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0004_auto_20201007_1135.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0005_auto_20201007_1143.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0006_auto_20201007_1238.py" afterDir="false" />
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="Version 07/10/2020&#10;12:43">
+      <change afterPath="$PROJECT_DIR$/core/migrations/0007_auto_20201015_1220.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/migrations/0008_auto_20201015_1248.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQLITE" beforeDir="false" afterPath="$PROJECT_DIR$/SQLITE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/core/consulta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/consulta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/creargrado.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/creargrado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/core/docentes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/docentes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/eliminargrado.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/eliminargrado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/core/estudiante.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/estudiante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/grado.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/grado.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/core/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usuarios/consultarrolesusuarios.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuarios/consultarrolesusuarios.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../leccion" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -378,7 +375,13 @@
       <workItem from="1602003165199" duration="199000" />
       <workItem from="1602003379616" duration="13617000" />
       <workItem from="1602026425117" duration="4473000" />
-      <workItem from="1602087500714" duration="4972000" />
+      <workItem from="1602087500714" duration="7642000" />
+      <workItem from="1602113401052" duration="1839000" />
+      <workItem from="1602633269927" duration="285000" />
+      <workItem from="1602634304689" duration="1277000" />
+      <workItem from="1602637427812" duration="214000" />
+      <workItem from="1602719634331" duration="2514000" />
+      <workItem from="1602776709603" duration="7677000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -513,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602017004766</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Version 07/10/2020&#10;12:43">
+      <created>1602092535068</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1602092535068</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +564,8 @@
     <MESSAGE value="Version 03/10/2020&#10;7:59" />
     <MESSAGE value="Version 06/10/2020&#10;14:23" />
     <MESSAGE value="Version 06/10/2020&#10;15:44" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 06/10/2020&#10;15:44" />
+    <MESSAGE value="Version 07/10/2020&#10;12:43" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 07/10/2020&#10;12:43" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
@@ -573,10 +584,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599678270421" />
-    <state x="996" y="173" key="FileChooserDialogImpl" timestamp="1599161741410">
+    <state x="996" y="173" key="FileChooserDialogImpl" timestamp="1602634988935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="996" y="173" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599161741410" />
+    <state x="996" y="173" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602634988935" />
     <state x="784" y="439" key="Github.CreateGistDialog" timestamp="1596477327042">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -589,22 +600,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="164" key="GridCell.Tab.0.bottom" timestamp="1602092328263">
+    <state width="1877" height="161" key="GridCell.Tab.0.bottom" timestamp="1602784080217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="164" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602092328263" />
-    <state width="1877" height="164" key="GridCell.Tab.0.center" timestamp="1602092328263">
+    <state width="1877" height="161" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080217" />
+    <state width="1877" height="161" key="GridCell.Tab.0.center" timestamp="1602784080217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="164" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602092328263" />
-    <state width="1877" height="164" key="GridCell.Tab.0.left" timestamp="1602092328263">
+    <state width="1877" height="161" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080217" />
+    <state width="1877" height="161" key="GridCell.Tab.0.left" timestamp="1602784080216">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="164" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602092328263" />
-    <state width="1877" height="164" key="GridCell.Tab.0.right" timestamp="1602092328263">
+    <state width="1877" height="161" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080216" />
+    <state width="1877" height="161" key="GridCell.Tab.0.right" timestamp="1602784080217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="164" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602092328263" />
+    <state width="1877" height="161" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080217" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1602003289297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -613,18 +624,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="713" y="183" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596297266871" />
-    <state x="884" y="173" key="SettingsEditor" timestamp="1599162304518">
+    <state x="884" y="173" key="SettingsEditor" timestamp="1602779099892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="884" y="173" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599162304518" />
+    <state x="884" y="173" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602779099892" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1595794519405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1602017029235">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1602092546797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602017029235" />
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602092546797" />
     <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601738561733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -641,10 +652,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="281" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599680503998" />
-    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1602013753927">
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1602781530470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602013753927" />
+    <state x="1103" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602781530469" />
     <state x="790" y="310" key="svn.repositoryBrowser" timestamp="1596598995826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

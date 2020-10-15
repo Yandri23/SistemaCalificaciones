@@ -13,6 +13,7 @@ from django.utils import timezone
 class Grado(models.Model):
     grado = models.CharField(max_length=50)
 
+
     class Meta:
         db_table = "tr_grado"
         verbose_name = "grado"
@@ -30,7 +31,7 @@ class Materia(models.Model):
         db_table = "tr_materia"
         verbose_name = "materia"
         verbose_name_plural = "materias"
-        ordering = ['materia']
+        ordering = ['id']
 
     def __str__(self):
         return self.materia
@@ -82,16 +83,11 @@ class Estudiante(models.Model):
 
 
 class Consulta(models.Model):
-    grado = models.OneToOneField(Grado, on_delete=models.CASCADE)
     estudiante = models.ForeignKey(Estudiante, on_delete=models.CASCADE)
-    # docente = models.ForeignKey(Docente, on_delete=models.CASCADE)
-
+    grado = models.ForeignKey(Grado, on_delete=models.CASCADE)
     class Meta:
-        db_table = "tr_consulta"
+        db_table = "consulta"
         verbose_name = "consulta"
         verbose_name_plural = "consultas"
-        ordering = ['estudiante']
-
-        def __str__(self):
-            return self.estudiante_id
-
+    def __str__(self):
+        return self.estudiante_id

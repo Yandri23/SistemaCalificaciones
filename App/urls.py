@@ -35,13 +35,16 @@ urlpatterns = [
     path('creardocente/', views.creardocente, name="creardocente"),
     path('modificardocente/<int:pk>', views.modificardocente, name="modificardocente"),
     path('eliminardocente/<int:pk>', views.eliminardocente, name="eliminardocente"),
+    path('exportarlistadocentes/', views.exportarlistadocentes, name="exportarlistadocentes"),
     path('docentes/', views.docentes, name="docentes"),
+    #path('docentesbydate/', views.docentesbydate, name="docentesbydate"),
 
-##CRUD PARA LOS ALUMNOS
+    ##CRUD PARA LOS ALUMNOS
 
     path('crearestudiante/', views.crearestudiante, name="crearestudiante"),
     path('modificarestudiante/<int:pk>', views.modificarestudiante, name="modificarestudiante"),
     path('eliminarestudiante/<int:pk>', views.eliminarestudiante, name="eliminarestudiante"),
+    path('exportarlistaestudiante/', views.exportarlistaestudiante, name="exportarlistaestudiante"),
     path('estudiante/', views.estudiante, name="estudiante"),
 
 ##CRUD PARA LOS GRADOS
@@ -55,12 +58,15 @@ urlpatterns = [
     path('crearconsulta/', views.crearconsulta, name="crearconsulta"),
     path('modificarconsulta/<int:pk>', views.modificarconsulta, name="modificarconsulta"),
     path('eliminarconsulta/<int:pk>', views.eliminarconsulta, name="eliminarconsulta"),
+    path('exportarlistaconsulta/', views.exportarlistaconsulta, name="exportarlistaconsulta"),
     path('consulta/', views.consulta, name="consulta"),
 
-##CRUD PARA LOS CONSULTA
+
+##CRUD PARA LOS MATERIA
     path('materiacrear/', views.materiacrear, name="materiacrear"),
     path('materiamodificar/<int:pk>', views.materiamodificar, name="materiamodificar"),
     path('materiaeliminar/<int:pk>', views.materiaeliminar, name="materiaeliminar"),
+    path('exportarlistamateria/', views.exportarlistamateria, name="exportarlistamateria"),
     path('materia/', views.materia, name="materia"),
 
 

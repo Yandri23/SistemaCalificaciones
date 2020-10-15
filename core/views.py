@@ -1,8 +1,19 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login
+from reportlab.lib import colors
+from reportlab.lib.enums import TA_CENTER, TA_RIGHT
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import inch
+from reportlab.platypus import Paragraph, Table, TableStyle, SimpleDocTemplate
+
 from .models import Docente, Estudiante, Grado, Consulta, Materia
 from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm, MateriaForm
+import io
+from django.http import FileResponse
+from reportlab.pdfgen import canvas
 
 # Create your views here.
 html_base = """
@@ -34,7 +45,6 @@ def contact(request, plantilla="core/contact.html"):
     return render(request, plantilla)
 
 
-
 def calificaciones(request, plantilla="core/calificaciones.html"):
     return render(request, plantilla)
 
@@ -58,6 +68,47 @@ def docentes(request, plantilla="core/docentes.html"):
         docentes = Docente.objects.filter(apellido__contains=search_term)
     return render(request, plantilla, {'docentes': docentes})
 
+def exportarlistadocentes(request, plantilla="core/docentes.html"):
+    # Create a file-like buffer to receive PDF data.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'filename="lista_docentes.pdf"'
+
+    buffer = io.BytesIO()
+
+    doc = SimpleDocTemplate(buffer,
+                            rightMargin=inch / 6,
+                            leftMargin=inch / 6,
+                            topMargin=inch / 4,
+                            bottomMargin=inch / 6,
+                            pagesize=A4)
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='centered', alignment=TA_CENTER))
+    styles.add(ParagraphStyle(name='RightAlign', fontName='Arial', align=TA_RIGHT))
+
+    docentes = []
+    styles = getSampleStyleSheet()
+    header = Paragraph("Listado de Docentes", styles['Heading1'])
+    docentes.append(header)
+    headings = ('Id', 'Nombre', 'Apellido', 'Edad')
+    alldocentes = [(d.id, d.nombre, d.apellido, d.edad) for d in Docente.objects.all()]
+    print
+    alldocentes
+
+    t = Table([headings] + alldocentes)
+    t.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (9, -1), 1, colors.springgreen),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.springgreen),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.springgreen)
+        ]
+    ))
+    docentes.append(t)
+    doc.build(docentes)
+    response.write(buffer.getvalue())
+    buffer.close()
+    return response
+
+
 
 def estudiante(request, plantilla="core/estudiante.html"):
     estudiante = Estudiante.objects.all()
@@ -65,6 +116,47 @@ def estudiante(request, plantilla="core/estudiante.html"):
         search_term = request.GET['search']
         estudiante = Estudiante.objects.filter(apellido__contains=search_term)
     return render(request, plantilla, {'estudiante': estudiante})
+
+def exportarlistaestudiante(request, plantilla="core/docentes.html"):
+    # Create a file-like buffer to receive PDF data.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'filename="lista_estudiante.pdf"'
+
+    buffer = io.BytesIO()
+
+    doc = SimpleDocTemplate(buffer,
+                            rightMargin=inch / 6,
+                            leftMargin=inch / 6,
+                            topMargin=inch / 4,
+                            bottomMargin=inch / 6,
+                            pagesize=A4)
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='centered', alignment=TA_CENTER))
+    styles.add(ParagraphStyle(name='RightAlign', fontName='Arial', align=TA_RIGHT))
+
+    estudiante = []
+    styles = getSampleStyleSheet()
+    header = Paragraph("Listado de Docentes", styles['Heading1'])
+    estudiante.append(header)
+    headings = ('Id', 'Nombre', 'Apellido', 'Edad')
+    allestudiante = [(d.id, d.nombre, d.apellido, d.edad) for d in Estudiante.objects.all()]
+    print
+    allestudiante
+
+    t = Table([headings] + allestudiante)
+    t.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (9, -1), 1, colors.springgreen),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.springgreen),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.springgreen)
+        ]
+    ))
+    estudiante.append(t)
+    doc.build(estudiante)
+    response.write(buffer.getvalue())
+    buffer.close()
+    return response
+
 
 
 def consulta(request, plantilla="core/consulta.html"):
@@ -75,6 +167,48 @@ def consulta(request, plantilla="core/consulta.html"):
         estudiante = Estudiante.objects.filter(apellido__contains=search_term)
         grado = Grado.objects.filter(grado__contains=search_term)
     return render(request, plantilla, {'estudiante': estudiante, 'grado': grado})
+
+def exportarlistaconsulta(request, plantilla="core/docentes.html"):
+    # Create a file-like buffer to receive PDF data.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'filename="lista_consulta.pdf"'
+
+    buffer = io.BytesIO()
+
+    doc = SimpleDocTemplate(buffer,
+                            rightMargin=inch / 6,
+                            leftMargin=inch / 6,
+                            topMargin=inch / 4,
+                            bottomMargin=inch / 6,
+                            pagesize=A4)
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='centered', alignment=TA_CENTER))
+    styles.add(ParagraphStyle(name='RightAlign', fontName='Arial', align=TA_RIGHT))
+
+    consulta = []
+    styles = getSampleStyleSheet()
+    header = Paragraph("Lista de Consultas", styles['Heading1'])
+    consulta.append(header)
+    headings = ('Id', 'estudiante', 'grado')
+    allconsulta = [(d.id, d.estudiante, d.grado) for d in Consulta.objects.all()]
+    print
+    allconsulta
+
+    t = Table([headings] + allconsulta)
+    t.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (9, -1), 1, colors.springgreen),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.springgreen),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.springgreen)
+        ]
+    ))
+    consulta.append(t)
+    doc.build(consulta)
+    response.write(buffer.getvalue())
+    buffer.close()
+    return response
+
+
 
 
 def grado(request, plantilla="core/grado.html"):
@@ -91,6 +225,49 @@ def materia(request, plantilla="core/materia.html"):
         search_term = request.GET['search']
         materia = Materia.objects.filter(materia__contains=search_term)
     return render(request, plantilla, {'materia': materia})
+
+def exportarlistamateria(request, plantilla="core/docentes.html"):
+    # Create a file-like buffer to receive PDF data.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'filename="lista_materia.pdf"'
+
+    buffer = io.BytesIO()
+
+    doc = SimpleDocTemplate(buffer,
+                            rightMargin=inch / 6,
+                            leftMargin=inch / 6,
+                            topMargin=inch / 4,
+                            bottomMargin=inch / 6,
+                            pagesize=A4)
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='centered', alignment=TA_CENTER))
+    styles.add(ParagraphStyle(name='RightAlign', fontName='Arial', align=TA_RIGHT))
+
+    materia = []
+    styles = getSampleStyleSheet()
+    header = Paragraph("Listado de materia", styles['Heading1'])
+    materia.append(header)
+    headings = ('Id', 'Materia')
+    allmateria = [(d.id, d.materia) for d in Materia.objects.all()]
+    print
+    allmateria
+
+    t = Table([headings] + allmateria)
+    t.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (9, -1), 1, colors.springgreen),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.springgreen),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.springgreen)
+        ]
+    ))
+    materia.append(t)
+    doc.build(materia)
+    response.write(buffer.getvalue())
+    buffer.close()
+    return response
+
+
+
 
 def planificacion(request, plantilla="core/planificacion.html"):
     return render(request, plantilla)
@@ -233,7 +410,7 @@ def eliminargrado(request, pk, plantilla="core/eliminargrado.html"):
         grado = get_object_or_404(Grado, pk=pk)
         formGrado = GradoForm(request.POST or None, instance=grado)
         if formGrado.is_valid():
-            formGrado.save()
+            grado.delete()
         return redirect("grado")
     else:
         grado = get_object_or_404(Grado, pk=pk)
@@ -261,7 +438,6 @@ def crearconsulta(request, plantilla="core/crearconsulta.html"):
     return render(request, plantilla, {'formConsulta': formConsulta})
 
 
-
 ## MODIFICAR CONSULTA CRUD
 def modificarconsulta(request, pk, plantilla="core/modificarconsulta.html"):
     if request.method == "POST":
@@ -271,28 +447,28 @@ def modificarconsulta(request, pk, plantilla="core/modificarconsulta.html"):
             formConsulta.save()
         return redirect("consulta")
     else:
-        consulta = get_object_or_404(Consulta, pk=pk)
-        formConsulta = ConsultaForm(request.POST or None, instance=consulta)
+       consulta = get_object_or_404(Consulta, pk=pk)
+       formConsulta = ConsultaForm(request.POST or None, instance=consulta)
     return render(request, plantilla, {'formConsulta': formConsulta})
 
 
 ## ELIMINAR CONSULTA CRUD
 def eliminarconsulta(request, pk, plantilla="core/eliminarconsulta.html"):
     if request.method == "POST":
-        consulta = get_object_or_404(Consulta, pk=pk)
-        formConsulta = ConsultaForm(request.POST or None, instance=consulta)
-        if formConsulta.is_valid():
-            formConsulta.save()
-        return redirect("consulta")
+       consulta = get_object_or_404(Consulta, pk=pk)
+       formConsulta = ConsultaForm(request.POST or None, instance=consulta)
+       if formConsulta.is_valid():
+           formConsulta.delete()
+       return redirect("consulta")
     else:
         consulta = get_object_or_404(Consulta, pk=pk)
         formConsulta = ConsultaForm(request.POST or None, instance=consulta)
     return render(request, plantilla, {'formConsulta': formConsulta})
 
 
-## CONSULTAR CONSULTA CRUD
+# CONSULTAR CONSULTA CRUD
 def consultarconsulta(request, plantilla="core/consultarconsulta.html"):
-    return render(request, plantilla)
+   return render(request, plantilla)
 
 
 ################## MATERIAS CRUD  ##################
@@ -329,7 +505,7 @@ def materiaeliminar(request, pk, plantilla="core/materiaeliminar.html"):
         materia = get_object_or_404(Materia, pk=pk)
         formMateria = MateriaForm(request.POST or None, instance=materia)
         if formMateria.is_valid():
-            formMateria.save()
+            materia.delete()
         return redirect("materia")
     else:
         materia = get_object_or_404(Materia, pk=pk)
