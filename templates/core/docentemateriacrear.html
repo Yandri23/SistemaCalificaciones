@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+{% block title %} Crear Docente Materia {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <h2> Crear Docente Materia </h2>
+    <form method="POST" action = "{% url 'docentemateriacrear' %}">
+        {% csrf_token %}
+        {{ formDocentemateria.as_p  }}
+
+        <input type="submit" value="Crear Docente Materia" />
+    </form>
+{% endblock %}

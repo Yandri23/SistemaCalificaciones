@@ -10,20 +10,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="Version 07/10/2020&#10;12:43">
-      <change afterPath="$PROJECT_DIR$/core/migrations/0007_auto_20201015_1220.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrations/0008_auto_20201015_1248.py" afterDir="false" />
+    <list default="true" id="0c2cf2c3-b671-4df5-8b86-5821dba1c5cf" name="Default Changelist" comment="Version 15/10/2020&#10;13:08">
+      <change afterPath="$PROJECT_DIR$/core/migrations/0009_docentemateria.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/consultaconsultar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/docentemateria.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/docentemateriaconsultar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/docentemateriacrear.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/docentemateriaeliminar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/core/docentemateriamodificar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQLITE" beforeDir="false" afterPath="$PROJECT_DIR$/SQLITE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/consulta.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/consulta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/docentes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/docentes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/eliminargrado.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/eliminargrado.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/estudiante.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/estudiante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/materia.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/materia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/usuarios/consultarrolesusuarios.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuarios/consultarrolesusuarios.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +382,8 @@
       <workItem from="1602634304689" duration="1277000" />
       <workItem from="1602637427812" duration="214000" />
       <workItem from="1602719634331" duration="2514000" />
-      <workItem from="1602776709603" duration="7677000" />
+      <workItem from="1602776709603" duration="8172000" />
+      <workItem from="1602785517071" duration="5149000" />
     </task>
     <task id="LOCAL-00001" summary="Guardado 11/07/2020">
       <created>1594478574471</created>
@@ -523,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602092535068</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Version 15/10/2020&#10;13:08">
+      <created>1602785233968</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1602785233968</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +574,8 @@
     <MESSAGE value="Version 06/10/2020&#10;14:23" />
     <MESSAGE value="Version 06/10/2020&#10;15:44" />
     <MESSAGE value="Version 07/10/2020&#10;12:43" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 07/10/2020&#10;12:43" />
+    <MESSAGE value="Version 15/10/2020&#10;13:08" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 15/10/2020&#10;13:08" />
   </component>
   <component name="WindowStateProjectService">
     <state x="698" y="343" key="#Notifications" timestamp="1596477390292">
@@ -600,22 +610,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1023" y="119" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596481618962" />
-    <state width="1877" height="161" key="GridCell.Tab.0.bottom" timestamp="1602784080217">
+    <state width="1877" height="200" key="GridCell.Tab.0.bottom" timestamp="1602790959846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080217" />
-    <state width="1877" height="161" key="GridCell.Tab.0.center" timestamp="1602784080217">
+    <state width="1877" height="200" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602790959846" />
+    <state width="1877" height="200" key="GridCell.Tab.0.center" timestamp="1602790959846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080217" />
-    <state width="1877" height="161" key="GridCell.Tab.0.left" timestamp="1602784080216">
+    <state width="1877" height="200" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602790959846" />
+    <state width="1877" height="200" key="GridCell.Tab.0.left" timestamp="1602790959846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080216" />
-    <state width="1877" height="161" key="GridCell.Tab.0.right" timestamp="1602784080217">
+    <state width="1877" height="200" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602790959846" />
+    <state width="1877" height="200" key="GridCell.Tab.0.right" timestamp="1602790959846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602784080217" />
+    <state width="1877" height="200" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602790959846" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1602003289297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -632,10 +642,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595794519405" />
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1602092546797">
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2" timestamp="1602785273290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602092546797" />
+    <state x="658" y="175" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602785273290" />
     <state x="842" y="407" width="316" height="245" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601738561733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

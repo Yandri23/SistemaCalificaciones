@@ -91,3 +91,15 @@ class Consulta(models.Model):
         verbose_name_plural = "consultas"
     def __str__(self):
         return self.estudiante_id
+
+
+class Docentemateria(models.Model):
+    docente = models.ForeignKey(Docente, on_delete=models.CASCADE)
+    materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
+    class Meta:
+        db_table = "docentemateria"
+        verbose_name = "docentemateria"
+        verbose_name_plural = "docentematerias"
+
+    def __str__(self):
+        return self.docente_id

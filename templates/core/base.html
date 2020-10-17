@@ -97,9 +97,12 @@
                         </ul>
                      </li>
 
-                    <li class="nav-item">
-                <a class="nav-link" href="{% url 'consulta' %}">Consulta</a>
-                    </li>
+                    <li><a href="">Consulta</a>
+                        <ul>
+                    <li><a href="{% url 'consulta' %}">Grado Estudiante</a></li>
+                    <li><a href="{% url 'docentemateria' %}">Materia Docente</a></li>
+                        </ul>
+                     </li>
 
                 </ul>
 {% endif %}

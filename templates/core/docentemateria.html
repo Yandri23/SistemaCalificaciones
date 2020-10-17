@@ -1,0 +1,54 @@
+{% extends "core/base.html" %}
+{% block title %} Docentes {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
+
+{% block yandri %}
+    <div class="container">
+        <div class="col-md-15" style="margin-top: 100px;">
+
+            <h2> Docente Materia </h2>
+
+         <form class="form-control" method="GET" action="{% url 'docentemateria' %}">
+            <input class="form-control" type="search" name="search">
+            <button class="form-control" type="submit"> Buscar </button>
+        </form>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <a class="nav-item" href="{% url 'docentemateriaexportarlista' %}">Exportar a PDF</a>
+                    </tr>
+                    <tr>
+                        <th>Id</th>
+                        <th>Docente</th>
+                        <th>Materia</th>
+
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for d in docentemateria %}
+                        <tr>
+                            <td>{{ d.id }}</td>
+                            <td>{{ d.docente }}</td>
+                            <td>{{ d.materia }}</td>
+
+                            <td><a class="nav-link" href="{% url 'docentemateriamodificar' d.id %}">editar</a></td>
+                            <td><a class="nav-link" href="{% url 'docentemateriaeliminar' d.id %}">elimina</a></td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="nav-link" href="{% url 'docentemateriacrear' %}">Crear Nuevo </a>
+
+
+        </div>
+    </div>
+
+{% endblock %}

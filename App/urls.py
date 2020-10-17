@@ -69,6 +69,17 @@ urlpatterns = [
     path('exportarlistamateria/', views.exportarlistamateria, name="exportarlistamateria"),
     path('materia/', views.materia, name="materia"),
 
+##CRUD DOCENTEMATERIA
+    path('docentemateriacrear/', views.docentemateriacrear, name="docentemateriacrear"),
+    path('docentemateriamodificar/<int:pk>', views.docentemateriamodificar, name="docentemateriamodificar"),
+    path('docentemateriaeliminar/<int:pk>', views.docentemateriaeliminar, name="docentemateriaeliminar"),
+    path('docentemateriaexportarlista/', views.docentemateriaexportarlista, name="docentemateriaexportarlista"),
+    path('docentemateria/', views.docentemateria, name="docentemateria"),
+
+
+
+
+##EXTRAS
 
     path('planificacion/', views.planificacion, name="planificacion"),
     path('usuarios/', include('usuarios.urls'), name="usuarios"),

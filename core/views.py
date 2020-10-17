@@ -9,8 +9,8 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import Paragraph, Table, TableStyle, SimpleDocTemplate
 
-from .models import Docente, Estudiante, Grado, Consulta, Materia
-from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm, MateriaForm
+from .models import Docente, Estudiante, Grado, Consulta, Materia, Docentemateria
+from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm, MateriaForm, DocentemateriaForm
 import io
 from django.http import FileResponse
 from reportlab.pdfgen import canvas
@@ -515,3 +515,90 @@ def materiaeliminar(request, pk, plantilla="core/materiaeliminar.html"):
 ## CONSULTAR MATERIA CRUD
 def materiaconsultar(request, plantilla="core/materiaconsultar.html"):
     return render(request, plantilla)
+
+## DOCENTEMATERIA CRUD
+
+def docentemateria(request, plantilla="core/docentemateria.html"):
+    docentes = Docente.objects.all()
+    materia = Materia.objects.all()
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        docentes = Docente.objects.filter(apellido__contains=search_term)
+        materia = Materia.objects.filter(materia__contains=search_term)
+    return render(request, plantilla, {'docente': docentes, 'materia': materia})
+
+
+def docentemateriacrear(request, plantilla="core/docentemateriacrear.html"):
+    if request.method == "POST":
+        formDocentemateria = DocentemateriaForm(request.POST)
+        if formDocentemateria.is_valid():
+            formDocentemateria.save()
+            return redirect("docentemateria")
+    else:
+        formDocentemateria = DocentemateriaForm()
+    return render(request, plantilla, {'formDocentemateria': formDocentemateria})
+
+def docentemateriamodificar(request, pk, plantilla="core/docentemateriamodificar.html"):
+    if request.method == "POST":
+        docentemateria = get_object_or_404(Docentemateria, pk=pk)
+        formDocentemateria = MateriaForm(request.POST or None, instance=docentemateria)
+        if formDocentemateria.is_valid():
+            formDocentemateria.save()
+        return redirect("docentemateria")
+    else:
+        docentemateria = get_object_or_404(Materia, pk=pk)
+        formDocentemateria = DocentemateriaForm(request.POST or None, instance=docentemateria)
+    return render(request, plantilla, {'formDocentemateria': formDocentemateria})
+
+def docentemateriaeliminar(request, pk, plantilla="core/docentemateriaeliminar.html"):
+    if request.method == "POST":
+        docentemateria = get_object_or_404(Docentemateria, pk=pk)
+        formDocentemateria = MateriaForm(request.POST or None, instance=docentemateria)
+        if formDocentemateria.is_valid():
+            docentemateria.delete()
+        return redirect("docentemateria")
+    else:
+        docentemateria = get_object_or_404(Materia, pk=pk)
+        formDocentemateria = DocentemateriaForm(request.POST or None, instance=docentemateria)
+    return render(request, plantilla, {'formDocentemateria': formDocentemateria})
+
+
+def docentemateriaexportarlista(request, plantilla="core/docentes.html"):
+    # Create a file-like buffer to receive PDF data.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'filename="lista_Docentemateria.pdf"'
+
+    buffer = io.BytesIO()
+
+    doc = SimpleDocTemplate(buffer,
+                            rightMargin=inch / 6,
+                            leftMargin=inch / 6,
+                            topMargin=inch / 4,
+                            bottomMargin=inch / 6,
+                            pagesize=A4)
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='centered', alignment=TA_CENTER))
+    styles.add(ParagraphStyle(name='RightAlign', fontName='Arial', align=TA_RIGHT))
+
+    docentemateria = []
+    styles = getSampleStyleSheet()
+    header = Paragraph("Listado de Docente materia", styles['Heading1'])
+    docentemateria.append(header)
+    headings = ('Id', 'Docente', 'Materia')
+    alldocentemateria = [(d.id,d.docente, d.materia) for d in Docentemateria.objects.all()]
+    print
+    alldocentemateria
+
+    t = Table([headings] + alldocentemateria)
+    t.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (9, -1), 1, colors.springgreen),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.springgreen),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.springgreen)
+        ]
+    ))
+    docentemateria.append(t)
+    doc.build(docentemateria)
+    response.write(buffer.getvalue())
+    buffer.close()
+    return response

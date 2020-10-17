@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+{% block title %} Modificar Docente Materia {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
+{% block yandri %}
+
+    <h2> Modificar Docente Materia </h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ formDocentemateria.as_p  }}
+
+
+        <input type="submit" value="Modificar Docente Materia" />
+    </form>
+{% endblock %}
