@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title> SISTEMA ACADEMICO EDBP </title>
+
     <style type="text/css">
     *{
         padding: 0px;
@@ -79,16 +79,10 @@
 
 {% if user.rolusuario.rol.nombre == "DOCENTE"  %}
                 <ul class="nav">
-                <li class="nav-item">
 
-                    <a class="nav-link" href="{% url 'home' %}">Inicio</a>
-                    </li>
-                {% comment %}
-                <li class="nav-item">
-                <a class="nav-link" href="{% url 'Calificaciones' %}">Calificaciones</a>
-                </li>{% endcomment %}
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
 
-                    <li><a href="">Secretaria</a>
+                    <li><a href="">Crear</a>
                         <ul>
                     <li><a href="{% url 'Docentes' %}">Docentes</a></li>
                     <li><a href="{% url 'estudiante' %}">Estudiante</a></li>
@@ -97,12 +91,23 @@
                         </ul>
                      </li>
 
-                    <li><a href="">Consulta</a>
+                    <li><a href="">Secretaria</a>
                         <ul>
-                    <li><a href="{% url 'consulta' %}">Grado Estudiante</a></li>
-                    <li><a href="{% url 'docentemateria' %}">Materia Docente</a></li>
+                    <li><a href="{% url 'docentemateria' %}">Docentes/Materia</a></li>
+                    <li><a href="{% url 'estudiantegrado' %}">Estudiante/Grado</a></li>
                         </ul>
                      </li>
+
+                    <li><a href="">Listados</a>
+                        <ul>
+                    <li><a href="{% url 'docentemateriapdf' %}">Materia Docente</a></li>
+                    <li><a href="{% url 'estudiantegradopdf' %}">Estudiante en Grado</a></li>
+                        </ul>
+                     </li>
+                   {% comment %}
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'Calificaciones' %}">Calificaciones</a>
+                </li>{% endcomment %}
 
                 </ul>
 {% endif %}

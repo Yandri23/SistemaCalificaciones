@@ -1,5 +1,5 @@
 from django import forms
-from .models import Docente, Estudiante, Grado, Consulta, Materia, Docentemateria
+from .models import Docente, Estudiante, Grado, Consulta, Materia, Docentemateria, Estudiantegrado
 from django.contrib.auth import authenticate, login
 
 
@@ -32,7 +32,16 @@ class MateriaForm(forms.ModelForm):
         model = Materia
         fields = ['materia']
 
+
+#crear docente materia
 class DocentemateriaForm(forms.ModelForm):
     class Meta:
         model = Docentemateria
         fields = ['docente', 'materia']
+
+
+#crear estudiante grado
+class EstudiantegradoForm(forms.ModelForm):
+    class Meta:
+        model = Estudiantegrado
+        fields =['estudiante', 'grado']

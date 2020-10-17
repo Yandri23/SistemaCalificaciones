@@ -9,8 +9,8 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import Paragraph, Table, TableStyle, SimpleDocTemplate
 
-from .models import Docente, Estudiante, Grado, Consulta, Materia, Docentemateria
-from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm, MateriaForm, DocentemateriaForm
+from .models import Docente, Estudiante, Grado, Consulta, Materia, Docentemateria, Estudiantegrado
+from .forms import DocenteForm, EstudianteForm, GradoForm, ConsultaForm, MateriaForm, DocentemateriaForm, EstudiantegradoForm
 import io
 from django.http import FileResponse
 from reportlab.pdfgen import canvas
@@ -136,7 +136,7 @@ def exportarlistaestudiante(request, plantilla="core/docentes.html"):
 
     estudiante = []
     styles = getSampleStyleSheet()
-    header = Paragraph("Listado de Docentes", styles['Heading1'])
+    header = Paragraph("Listado de Estudiante", styles['Heading1'])
     estudiante.append(header)
     headings = ('Id', 'Nombre', 'Apellido', 'Edad')
     allestudiante = [(d.id, d.nombre, d.apellido, d.edad) for d in Estudiante.objects.all()]
@@ -519,13 +519,22 @@ def materiaconsultar(request, plantilla="core/materiaconsultar.html"):
 ## DOCENTEMATERIA CRUD
 
 def docentemateria(request, plantilla="core/docentemateria.html"):
-    docentes = Docente.objects.all()
-    materia = Materia.objects.all()
+    docentemateria = Docentemateria.objects.all()
     if 'search' in request.GET:
         search_term = request.GET['search']
-        docentes = Docente.objects.filter(apellido__contains=search_term)
-        materia = Materia.objects.filter(materia__contains=search_term)
-    return render(request, plantilla, {'docente': docentes, 'materia': materia})
+        docentemateria = Docentemateria.objects.filter(docentemateria__contains=search_term)
+    return render(request, plantilla, {'docentemateria': docentemateria})
+
+
+def docentemateriapdf(request, plantilla="core/docentemateriapdf.html"):
+    docentemateria = list(Docentemateria.objects.all())
+    return render(request, plantilla, {'docentemateria': docentemateria})
+
+#    docentemateria = Docentemateria.objects.all()
+#    if 'search' in request.GET:
+#        search_term = request.GET['search']
+#        docentemateria = Docentemateria.objects.filter(docente__contains=search_term)
+#    return render(request, plantilla, {'docentemateria': docentemateria})
 
 
 def docentemateriacrear(request, plantilla="core/docentemateriacrear.html"):
@@ -541,24 +550,24 @@ def docentemateriacrear(request, plantilla="core/docentemateriacrear.html"):
 def docentemateriamodificar(request, pk, plantilla="core/docentemateriamodificar.html"):
     if request.method == "POST":
         docentemateria = get_object_or_404(Docentemateria, pk=pk)
-        formDocentemateria = MateriaForm(request.POST or None, instance=docentemateria)
+        formDocentemateria = DocentemateriaForm(request.POST or None, instance=docentemateria)
         if formDocentemateria.is_valid():
             formDocentemateria.save()
         return redirect("docentemateria")
     else:
-        docentemateria = get_object_or_404(Materia, pk=pk)
+        docentemateria = get_object_or_404(Docentemateria, pk=pk)
         formDocentemateria = DocentemateriaForm(request.POST or None, instance=docentemateria)
     return render(request, plantilla, {'formDocentemateria': formDocentemateria})
 
 def docentemateriaeliminar(request, pk, plantilla="core/docentemateriaeliminar.html"):
     if request.method == "POST":
         docentemateria = get_object_or_404(Docentemateria, pk=pk)
-        formDocentemateria = MateriaForm(request.POST or None, instance=docentemateria)
+        formDocentemateria = DocentemateriaForm(request.POST or None, instance=docentemateria)
         if formDocentemateria.is_valid():
             docentemateria.delete()
         return redirect("docentemateria")
     else:
-        docentemateria = get_object_or_404(Materia, pk=pk)
+        docentemateria = get_object_or_404(Docentemateria, pk=pk)
         formDocentemateria = DocentemateriaForm(request.POST or None, instance=docentemateria)
     return render(request, plantilla, {'formDocentemateria': formDocentemateria})
 
@@ -602,3 +611,102 @@ def docentemateriaexportarlista(request, plantilla="core/docentes.html"):
     response.write(buffer.getvalue())
     buffer.close()
     return response
+
+############################
+## CREAR ESTUDIANTE GRADO ##
+############################
+def estudiantegrado(request, plantilla="core/estudiantegrado.html"):
+    estudiantegrado = Estudiantegrado.objects.all()
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        estudiantegrado = Estudiantegrado.objects.filter(estudiantegrado__contains=search_term)
+    return render(request, plantilla, {'estudiantegrado': estudiantegrado})
+
+def estudiantegradopdf(request, plantilla="core/estudiantegradopdf.html"):
+    estudiantegrado = list(Estudiantegrado.objects.all())
+    return render(request, plantilla, {'estudiantegrado': estudiantegrado})
+
+def exportarlistaestudiantegradopdf(request, plantilla="core/docentes.html"):
+    # Create a file-like buffer to receive PDF data.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'filename="listade_de_Estudiantes_en_Grado.pdf"'
+
+    buffer = io.BytesIO()
+
+    doc = SimpleDocTemplate(buffer,
+                            rightMargin=inch / 6,
+                            leftMargin=inch / 6,
+                            topMargin=inch / 4,
+                            bottomMargin=inch / 6,
+                            pagesize=A4)
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='centered', alignment=TA_CENTER))
+    styles.add(ParagraphStyle(name='RightAlign', fontName='Arial', align=TA_RIGHT))
+
+    estudiantegradopdf = []
+    styles = getSampleStyleSheet()
+    header = Paragraph("Lista de Estudiantes en Grado", styles['Heading1'])
+    estudiantegradopdf.append(header)
+    headings = ('Id', 'estudiante', 'grado')
+    allestudiantegradopdf = [(d.id, d.estudiante, d.grado) for d in Estudiantegrado.objects.all()]
+    print
+    allestudiantegradopdf
+
+    t = Table([headings] + allestudiantegradopdf)
+    t.setStyle(TableStyle(
+        [
+            ('GRID', (0, 0), (9, -1), 1, colors.springgreen),
+            ('LINEBELOW', (0, 0), (-1, 0), 2, colors.springgreen),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.springgreen)
+        ]
+    ))
+    estudiantegradopdf.append(t)
+    doc.build(estudiantegradopdf)
+    response.write(buffer.getvalue())
+    buffer.close()
+    return response
+
+## CREAR ESTUDIANTE GRADO
+def estudiantegradocrear(request, plantilla="core/estudiantegradocrear.html"):
+    if request.method == "POST":
+        formEstudiantegrado = EstudiantegradoForm(request.POST)
+        if formEstudiantegrado.is_valid():
+            formEstudiantegrado.save()
+            return redirect("estudiantegrado")
+    else:
+        formEstudiantegrado = EstudiantegradoForm()
+    return render(request, plantilla, {'formEstudiantegrado': formEstudiantegrado})
+
+
+## MODIFICAR ESTUDIANTE GRADO
+def estudiantegradomodificar(request, pk, plantilla="core/estudiantegradomodificar.html"):
+    if request.method == "POST":
+        estudiantegrado = get_object_or_404(Estudiantegrado, pk=pk)
+        formEstudiantegrado = EstudiantegradoForm(request.POST or None, instance=estudiantegrado)
+        if formEstudiantegrado.is_valid():
+            formEstudiantegrado.save()
+        return redirect("estudiantegrado")
+    else:
+        estudiantegrado = get_object_or_404(Estudiantegrado, pk=pk)
+        formEstudiantegrado = EstudiantegradoForm(request.POST or None, instance=estudiantegrado)
+
+    return render(request, plantilla, {'formEstudiantegrado': formEstudiantegrado})
+
+
+## ELIMINAR ESTUDIANTE GRADO
+def estudiantegradoeliminar(request, pk, plantilla="core/estudiantegradoeliminar.html"):
+    if request.method == "POST":
+        estudiantegrado = get_object_or_404(Estudiantegrado, pk=pk)
+        formEstudiantegrado = EstudiantegradoForm(request.POST or None, instance=estudiantegrado)
+        if formEstudiantegrado.is_valid():
+            estudiantegrado.delete()
+        return redirect("estudiantegrado")
+    else:
+        estudiantegrado = get_object_or_404(Estudiantegrado, pk=pk)
+        formEstudiantegrado = EstudiantegradoForm(request.POST or None, instance=estudiantegrado)
+    return render(request, plantilla, {'formEstudiantegrado': formEstudiantegrado})
+
+
+## CONSULTAR ESTUDIANTE GRADO
+def estudiantegradoconsultar(request, plantilla="core/estudiantegrado.html"):
+    return render(request, plantilla)

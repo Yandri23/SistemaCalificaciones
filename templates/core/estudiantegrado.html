@@ -6,8 +6,9 @@
     <div class="container">
         <div class="col-md-15" style="margin-top: 100px;">
 
-            <h2> Docente y Materia </h2>
-         <form class="form-control" method="GET" action="{% url 'docentes' %}">
+            <h2> Estudiantes en Grados </h2>
+
+        <form class="form-control" method="GET" action="{% url 'estudiante' %}">
             <input class="form-control" type="search" name="search">
             <button class="form-control" type="submit"> Buscar </button>
         </form>
@@ -16,27 +17,27 @@
                 <table class="table">
                     <thead>
                     <tr>
-                         <th>Id</th>
-                        <th>Docente</th>
-                        <th>Materia</th>
+                        <th>Id</th>
+                        <th>Estudiante</th>
+                        <th>Grado</th>
 
                         <th>Editar</th>
-                          <th>Eliminar</th>
+                        <th>Eliminar</th>
 
                     </tr>
                     </thead>
                     <tbody>
 
-                    {% for r in docentemateria %}
+                    {% for r in estudiantegrado %}
                         <tr>
                             <td>{{ r.id }}</td>
-                            <td>{{ r.docente }}</td>
-                            <td>{{ r.materia }}</td>
+                            <td>{{ r.estudiante }}</td>
+                            <td>{{ r.grado }}</td>
 
 
-                        <td>  <a class="nav-link" href="{% url 'docentemateriamodificar' r.id  %}">Modificar</a> </td>
+                        <td>  <a class="nav-link" href="{% url 'estudiantegradomodificar' r.id  %}">Modificar</a> </td>
 
-                        <td>  <a class="nav-link" href="{% url 'docentemateriaeliminar' r.id  %}">Eliminar</a> </td>
+                        <td>  <a class="nav-link" href="{% url 'estudiantegradoeliminar' r.id  %}">Eliminar</a> </td>
 
                         </tr>
                     {% endfor %}
@@ -44,7 +45,7 @@
                 </table>
             </div>
 
-            <a class="nav-link" href="{% url 'docentemateriacrear' %}"> Crear </a>
+            <a class="nav-link" href="{% url 'estudiantegradocrear' %}"> Crear </a>
 
 
         </div>

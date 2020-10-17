@@ -31,16 +31,17 @@
                     <tbody>
 
                     {% for c in consulta %}
+
                         <tr>
                             <td>{{ c.id }}</td>
                             <td>{{ c.estudiante }}</td>
-                            <td>{{ c.grado }}</td>
 
                             <td><a class="nav-link" href="{% url 'modificarconsulta' c.id %}">editar</a></td>
                             <td><a class="nav-link" href="{% url 'eliminarconsulta' c.id %}">elimina</a></td>
 
                         </tr>
                     {% endfor %}
+
                     </tbody>
                 </table>
             </div>

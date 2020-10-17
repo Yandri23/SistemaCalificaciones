@@ -39,7 +39,7 @@ urlpatterns = [
     path('docentes/', views.docentes, name="docentes"),
     #path('docentesbydate/', views.docentesbydate, name="docentesbydate"),
 
-    ##CRUD PARA LOS ALUMNOS
+##CRUD PARA LOS ALUMNOS
 
     path('crearestudiante/', views.crearestudiante, name="crearestudiante"),
     path('modificarestudiante/<int:pk>', views.modificarestudiante, name="modificarestudiante"),
@@ -75,11 +75,18 @@ urlpatterns = [
     path('docentemateriaeliminar/<int:pk>', views.docentemateriaeliminar, name="docentemateriaeliminar"),
     path('docentemateriaexportarlista/', views.docentemateriaexportarlista, name="docentemateriaexportarlista"),
     path('docentemateria/', views.docentemateria, name="docentemateria"),
+    path('docentemateriapdf/', views.docentemateriapdf, name="docentemateriapdf"),
 
+##CRUD ESTUDIANTES EN GRADO
+    path('estudiantegradocrear/', views.estudiantegradocrear, name="estudiantegradocrear"),
+    path('estudiantegradomodificar/<int:pk>', views.estudiantegradomodificar, name="estudiantegradomodificar"),
+    path('estudiantegradoeliminar/<int:pk>', views.estudiantegradoeliminar, name="estudiantegradoeliminar"),
+    path('exportarlistaestudiantegradopdf/', views.exportarlistaestudiantegradopdf, name="exportarlistaestudiantegradopdf"),
+    path('estudiantegradoconsultar/', views.estudiantegradoconsultar, name="estudiantegradoconsultar"),
+    path('estudiantegrado/', views.estudiantegrado, name="estudiantegrado"),
+    path('estudiantegradopdf/', views.estudiantegradopdf, name="estudiantegradopdf"),
 
-
-
-##EXTRAS
+    ##EXTRAS
 
     path('planificacion/', views.planificacion, name="planificacion"),
     path('usuarios/', include('usuarios.urls'), name="usuarios"),

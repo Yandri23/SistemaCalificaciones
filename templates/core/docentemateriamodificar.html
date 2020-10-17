@@ -1,14 +1,14 @@
 {% extends "core/base.html" %}
-{% block title %} Modificar Docente Materia {% endblock %}
-{% block imagen %}{% load static %} {% static 'img/Consulta.jpg' %}{% endblock %}
-{% block yandri %}
+{% block title %} portfolio {% endblock %}
+{% block imagen %}{% load static %} {% static 'img/Estudiante-bg.jpg' %}{% endblock %}
 
-    <h2> Modificar Docente Materia </h2>
-    <form method="POST">
+
+{% block header %}
+ <form method="post" >
         {% csrf_token %}
-        {{ formDocentemateria.as_p  }}
+       {{ formDocentemateria.as_p  }}
 
-
-        <input type="submit" value="Modificar Docente Materia" />
+        <input type="submit" value="modificar">
+        <input type="hidden" name="next" value="{{ next }}">
     </form>
 {% endblock %}

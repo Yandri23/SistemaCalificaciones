@@ -4,11 +4,11 @@
 
 
 {% block header %}
- <form method="post">
+ <form method="post" >
         {% csrf_token %}
-       {{ formDocentemateria.as_p  }}
+       {{ formEstudiantegrado.as_p  }}
 
-        <input type="submit" value="eliminar">
+        <input type="submit" value="modificar">
         <input type="hidden" name="next" value="{{ next }}">
     </form>
 {% endblock %}

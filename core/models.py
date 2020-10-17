@@ -100,6 +100,23 @@ class Docentemateria(models.Model):
         db_table = "docentemateria"
         verbose_name = "docentemateria"
         verbose_name_plural = "docentematerias"
+        ordering = ['docente']
+
 
     def __str__(self):
         return self.docente_id
+
+
+class Estudiantegrado(models.Model):
+    estudiante = models.ForeignKey(Estudiante, on_delete=models.CASCADE)
+    grado = models.ForeignKey(Grado, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = "estudiantegrado"
+        verbose_name = "estudiantegrado"
+        verbose_name_plural = "estudiantegrados"
+        ordering = ['estudiante']
+
+
+    def __str__(self):
+        return self.estudiante_id
